@@ -1,0 +1,7 @@
+[
+ {"id":"REQ-TEAM-001","title":"Invite team member by email","actor":"Workspace owner","trigger":"Owner submits a team invitation","behavior":"A pending invitation is recorded without creating a member session","constraints":["Use a synthetic email in demos"],"acceptance":["Invitation is pending and associated with the workspace"]},
+ {"id":"REQ-TEAM-002","title":"Assign role to invited member","actor":"Workspace owner","trigger":"Owner selects a role","behavior":"Selected role is attached to the pending invitation","constraints":["Do not allow privilege escalation"],"acceptance":["Assigned role is visible before sending"]},
+ {"id":"REQ-TEAM-003","title":"Accept invitation","actor":"Invited person","trigger":"Person opens a valid invitation","behavior":"Person can join the specified workspace","constraints":["Expired tokens must be rejected"],"acceptance":["Valid invitation is accepted only once"]},
+ {"id":"REQ-TEAM-004","title":"Revoke pending invitation","actor":"Workspace owner","trigger":"Owner revokes a pending invitation","behavior":"Invitation can no longer be used","constraints":["Record a minimal audit event"],"acceptance":["Revoked invitation cannot be accepted"]},
+ {"id":"REQ-TEAM-005","title":"Handle invitation errors","actor":"Invited person","trigger":"An invitation is expired or invalid","behavior":"An actionable error is shown without revealing account existence","constraints":["Avoid personal data leakage"],"acceptance":["Invalid invitation shows safe recovery guidance"]}
+]

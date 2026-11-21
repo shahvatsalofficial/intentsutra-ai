@@ -1,0 +1,8 @@
+$ intentsutra verify --report audit-sample/audit-report.json
+{
+  "valid": true,
+  "seal": "8c614bdf258efdd5dd1b4cc83aaea012f46464ebce84834d15ffd78230fb8802",
+  "verdict": "PASS"
+}
+
+[exit 0]

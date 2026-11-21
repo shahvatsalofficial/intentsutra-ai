@@ -1,0 +1,30 @@
+$ intentsutra audit --out audit-sample
+{
+  "valid": true,
+  "count": 8,
+  "lastHash": "ce77dc0531b59898c4c47404daa93383bc0c09a869bd29997e871c6ca3c9770a",
+  "verdict": "PASS",
+  "summary": {
+    "requirements": 5,
+    "checks": 11,
+    "passed": 11,
+    "failed": 0,
+    "bySeverity": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0,
+      "info": 0
+    },
+    "attested": 0,
+    "auditEvents": 8,
+    "auditChainHead": "ce77dc0531b59898c4c47404daa93383bc0c09a869bd29997e871c6ca3c9770a"
+  },
+  "files": {
+    "json": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-vok22v\\audit-sample\\audit-report.json",
+    "markdown": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-vok22v\\audit-sample\\audit-report.md",
+    "html": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-vok22v\\audit-sample\\audit-report.html"
+  }
+}
+
+[exit 0]

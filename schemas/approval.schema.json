@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntentSutra local approval v1.0",
+  "type": "object",
+  "required": [
+    "revision",
+    "reviewer",
+    "note",
+    "time",
+    "kind",
+    "identityVerified"
+  ],
+  "properties": {
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "reviewer": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "kind": {
+      "const": "local-self-attested-approval"
+    },
+    "identityVerified": {
+      "const": false
+    }
+  }
+}

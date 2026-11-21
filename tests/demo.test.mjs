@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+import {init,ingest,link} from '../packages/core/registry.mjs';import {trace} from '../packages/core/trace.mjs';import {generate} from '../packages/core/reports.mjs';import {temp,fixture} from './helpers.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+function scenario(){const t=temp();init(t.path);fs.copyFileSync(path.join(root,'fixtures/team-invitations.json'),path.join(t.path,'team.json'));const x=ingest(t.path,'team.json');for(let i=0;i<3;i++){const f=fixture(t.path,`test-${i}.txt`,'synthetic test-file reference');link(t.path,x.added[i],{kind:'test',ref:f,revision:1});}return {...t,ids:x.added};}
+test('sample imports exactly five structured requirements',()=>{const t=scenario();try{assert.equal(t.ids.length,5);}finally{t.clean();}});
+test('three linked test files do not mean three passing tests',()=>{const t=scenario();try{const r=trace(t.path);assert.equal(r.requirements.filter(x=>x.coverage.testFileObserved).length,3);assert.equal(r.requirements.filter(x=>x.coverage.importedTestPass).length,0);}finally{t.clean();}});
+test('sample leaves all five requirements unapproved',()=>{const t=scenario();try{assert.equal(trace(t.path).summary.approved,0);}finally{t.clean();}});
+test('sample acceptance export has five scenarios',()=>{const t=scenario();try{const s=fs.readFileSync(generate(t.path).outputs.acceptance,'utf8');assert.equal((s.match(/Scenario:/g)||[]).length,5);}finally{t.clean();}});
+test('sample report never labels a requirement completed',()=>{const t=scenario();try{assert.equal(trace(t.path).requirements.filter(r=>r.state==='human-attested-evidence-linked').length,0);}finally{t.clean();}});

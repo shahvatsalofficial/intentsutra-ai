@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntentSutra traceability report v1.0",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "projectId",
+    "summary",
+    "requirements",
+    "disclaimer"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "projectId": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "requirements": {
+      "type": "array"
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  }
+}

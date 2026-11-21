@@ -1,0 +1,8 @@
+{
+  "name": "intentsutra-ai",
+  "description": "IntentSutra portable skills and agent definitions; native plugin activation unverified",
+  "author": {
+    "name": "Vatsal Shah"
+  },
+  "version": "0.1.0"
+}

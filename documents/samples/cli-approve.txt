@@ -1,0 +1,11 @@
+$ intentsutra approve --id REQ-TEAM-001 --revision 1 --reviewer Asha --note Reviewed acceptance with product owner --confirm-human
+{
+  "revision": 1,
+  "reviewer": "Asha",
+  "note": "Reviewed acceptance with product owner",
+  "time": "2026-11-21T20:41:42.740Z",
+  "kind": "local-self-attested-approval",
+  "identityVerified": false
+}
+
+[exit 0]

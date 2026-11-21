@@ -1,0 +1,92 @@
+{
+  "name": "intentsutra-ai",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "description": "IntentSutra AI: local-first requirements-to-evidence traceability CLI. Revision-bound requirement IDs, explicit unknowns, human approvals, hash-pinned evidence, stale-evidence detection, hash-chained audit log and independent audit reports in Markdown, HTML and JSON. 21 agent roles, 26 portable skills. Zero dependencies, no API keys.",
+  "author": {
+    "name": "Vatsal Shah",
+    "url": "https://github.com/shahvatsalofficial"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/run-tests.mjs",
+    "doctor": "node packages/cli/index.mjs doctor",
+    "demo": "node scripts/demo.mjs",
+    "start": "node packages/cli/index.mjs help",
+    "audit": "node packages/cli/index.mjs audit --out audit-out",
+    "proof": "node scripts/proof.mjs",
+    "docs:build": "node documents/build.mjs",
+    "pack:check": "npm pack --dry-run"
+  },
+  "bin": {
+    "intentsutra": "packages/cli/index.mjs",
+    "intentsutra-ai": "packages/cli/index.mjs"
+  },
+  "homepage": "https://shahvatsalofficial.github.io/intentsutra-ai/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahvatsalofficial/intentsutra-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahvatsalofficial/intentsutra-ai/issues"
+  },
+  "keywords": [
+    "requirements",
+    "requirements-traceability",
+    "traceability-matrix",
+    "acceptance-criteria",
+    "gherkin",
+    "evidence",
+    "audit-trail",
+    "human-approval",
+    "change-impact",
+    "agent-skills",
+    "claude-code",
+    "cursor",
+    "codex",
+    "github-copilot",
+    "gemini-cli",
+    "cli",
+    "offline",
+    "local-first",
+    "zero-dependencies",
+    "product-engineering"
+  ],
+  "files": [
+    "packages",
+    "skills",
+    "agents",
+    ".claude/agents",
+    "adapters",
+    "fixtures",
+    "schemas",
+    "rules",
+    "workflows",
+    "policies",
+    "plugins",
+    "integrations",
+    "docs",
+    "examples",
+    "scripts/install.sh",
+    "scripts/install.ps1",
+    "scripts/install.cmd",
+    "scripts/demo.mjs",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    "llms.txt"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

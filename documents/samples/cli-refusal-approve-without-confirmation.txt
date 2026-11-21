@@ -1,0 +1,6 @@
+$ intentsutra approve --id REQ-TEAM-001 --revision 1 --reviewer Asha --note ok
+
+[stderr]
+APPROVAL_REQUIRED: Explicit human confirmation, reviewer, note and exact revision required
+
+[exit 1]

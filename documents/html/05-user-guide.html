@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>User Guide · IntentSutra AI</title><meta name="description" content="IntentSutra AI documentation: requirements-to-evidence traceability, human approvals, stale-evidence detection and independent audit reports in Markdown, HTML and JSON."><link rel="canonical" href="https://shahvatsalofficial.github.io/intentsutra-ai/05-user-guide.html"><meta property="og:type" content="website"><meta property="og:site_name" content="IntentSutra AI"><meta property="og:title" content="User Guide · IntentSutra AI"><meta property="og:description" content="Local-first requirements-to-evidence CLI: revision-bound IDs, human approvals, stale-evidence detection, audit reports in Markdown, HTML and JSON. Not a certification."><meta property="og:url" content="https://shahvatsalofficial.github.io/intentsutra-ai/05-user-guide.html"><meta name="twitter:card" content="summary"><meta name="author" content="Vatsal Shah"><style>:root{--bg:#f6f7fb;--card:#fff;--ink:#14202b;--mute:#53636f;--line:#d9e1e8;--brand:#3b3fa8;--brand2:#eceefe;--code:#eef2f6;--ok:#13795b;--warn:#a15c00}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1220;--card:#171b2e;--ink:#e6edf3;--mute:#9db0be;--line:#27343f;--brand:#9aa0ff;--brand2:#1c2140;--code:#1b2733;--ok:#4cd6a3;--warn:#f0b254}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--brand)}a:focus-visible,button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--card);padding:.5rem 1rem;z-index:9}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);min-height:100vh}
+nav.side{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:1.25rem 1rem;border-right:1px solid var(--line);background:var(--card)}
+nav.side .brand{font-weight:700;font-size:1.1rem;color:var(--brand);text-decoration:none;display:block;margin-bottom:.2rem}
+nav.side small{color:var(--mute);display:block;margin-bottom:1rem}
+nav.side a.item{display:block;padding:.35rem .6rem;border-radius:8px;text-decoration:none;color:var(--ink);font-size:.93rem}
+nav.side a.item:hover{background:var(--brand2)}nav.side a.item[aria-current=page]{background:var(--brand2);color:var(--brand);font-weight:600}
+main{max-width:920px;padding:2.5rem 2rem 5rem;width:100%}
+h1{font-size:2rem;line-height:1.2;margin:.2rem 0 1rem}h2{margin-top:2.2rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}h3{margin-top:1.6rem}
+.scroll{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.93rem}th,td{padding:.55rem .75rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--brand2);font-weight:600}tr:last-child td{border-bottom:0}
+pre{background:var(--code);padding:1rem;border-radius:10px;overflow:auto;border:1px solid var(--line);font-size:.88rem}code{background:var(--code);padding:.08rem .35rem;border-radius:5px;font:.9em ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}pre code{background:none;padding:0}
+blockquote{margin:1rem 0;padding:.5rem 1rem;border-left:4px solid var(--brand);background:var(--brand2);border-radius:0 8px 8px 0}
+.pager{display:flex;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line)}
+footer{color:var(--mute);font-size:.85rem;margin-top:2rem}
+.hero{background:linear-gradient(135deg,var(--brand2),var(--card));border:1px solid var(--line);border-radius:16px;padding:2rem;margin-bottom:1.5rem}
+.hero p{font-size:1.1rem;color:var(--mute);max-width:60ch}.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}.chip{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:.15rem .8rem;font-size:.85rem}.chip.ok{color:var(--ok);border-color:var(--ok)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1rem 1.2rem;text-decoration:none;color:var(--ink);display:block}.card:hover{border-color:var(--brand)}.card b{display:block;color:var(--brand)}.card span{color:var(--mute);font-size:.9rem}
+@media(max-width:860px){.layout{grid-template-columns:1fr}nav.side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}main{padding:1.5rem 1rem 4rem}}
+@media print{nav.side,.pager,.skip{display:none}.layout{display:block}main{max-width:none}body{background:#fff;color:#000}}</style></head><body><a class="skip" href="#main">Skip to content</a><div class="layout"><nav class="side" aria-label="Documentation"><a class="brand" href="index.html">IntentSutra AI</a><small>v0.2.0 · documentation</small><a class="item" href="01-executive-summary.html">Executive Summary</a><a class="item" href="02-functional-specification.html">Functional Specification</a><a class="item" href="03-architecture.html">Architecture</a><a class="item" href="04-technical-reference.html">Technical Reference</a><a class="item" href="05-user-guide.html" aria-current="page">User Guide</a><a class="item" href="06-security-and-privacy.html">Security and Privacy</a><a class="item" href="07-rules-and-evidence.html">Rules and Evidence Model</a><a class="item" href="08-test-report.html">Test Report</a><a class="item" href="09-operations-and-release.html">Operations and Release</a><a class="item" href="10-legal-and-governance.html">Legal and Governance</a><a class="item" href="11-roadmap-and-faq.html">Roadmap and FAQ</a><a class="item" href="12-glossary.html">Glossary</a><a class="item" href="13-assurance-and-evidence.html">Assurance and Evidence</a><a class="item" href="https://github.com/shahvatsalofficial/intentsutra-ai">GitHub ↗</a></nav><main id="main"><h1 id="user-guide">User Guide</h1>
+<p>A complete walk-through using the bundled synthetic fixtures. Every command below was run for real; transcripts are in <code>samples/</code>.</p>
+<h2 id="1-check-the-host">1. Check the host</h2>
+<pre><code>npx intentsutra-ai doctor</code></pre>
+<h2 id="2-create-a-workspace-and-import-requirements">2. Create a workspace and import requirements</h2>
+<pre><code>mkdir demo &amp;&amp; cd demo
+cp &lt;package&gt;/fixtures/team-invitations.json .
+intentsutra init
+intentsutra ingest --file team-invitations.json
+intentsutra list</code></pre>
+<p>You get five requirements (<code>REQ-TEAM-001</code> to <code>005</code>). Each shows how many questions are still open.</p>
+<h2 id="3-read-the-unknowns">3. Read the unknowns</h2>
+<pre><code>intentsutra review --id REQ-TEAM-001</code></pre>
+<p>Questions are never answered for you. Candidate scenarios contain <code>[TO CONFIRM]</code> placeholders; they are <strong>unapproved drafts</strong>.</p>
+<h2 id="4-approve-a-human-decision">4. Approve (a human decision)</h2>
+<pre><code>intentsutra approve --id REQ-TEAM-001 --revision 1 --reviewer &quot;Asha&quot; --note &quot;Reviewed with product owner&quot; --confirm-human</code></pre>
+<p>Without <code>--confirm-human</code>, the exact revision, a reviewer and a note, the command is refused. The record says <code>identityVerified: false</code>.</p>
+<h2 id="5-link-evidence-to-that-revision">5. Link evidence to that revision</h2>
+<pre><code>intentsutra link --id REQ-TEAM-001 --revision 1 --kind code --ref src/invite.js
+intentsutra link --id REQ-TEAM-001 --revision 1 --kind test-run --ref ci/run-log.txt --outcome passed
+intentsutra link --id REQ-TEAM-001 --revision 1 --kind release --ref notes/release.txt --outcome released</code></pre>
+<p>Files must live inside the workspace and are hashed. The <code>test-run</code> and <code>release</code> outcomes are what <strong>you</strong> report; the tool does not run anything.</p>
+<h2 id="6-attest">6. Attest</h2>
+<pre><code>intentsutra attest --id REQ-TEAM-001 --revision 1 --reviewer &quot;Asha&quot; --note &quot;Evidence reviewed by hand&quot; --confirm-human</code></pre>
+<p>Refused unless approval, code, an imported passed test-run and an imported release claim exist for the current revision. The resulting state is <code>human-attested-evidence-linked</code>, never &quot;completed&quot;.</p>
+<h2 id="7-change-the-requirement">7. Change the requirement</h2>
+<pre><code>intentsutra revise --id REQ-TEAM-001 --file v2.json --revision 1
+intentsutra impact --id REQ-TEAM-001</code></pre>
+<p>Revision 2 is created. The old approval, links and attestation are kept as history and listed as stale. Linking to revision 1 is now refused (<code>STALE_REVISION</code>).</p>
+<h2 id="8-reports">8. Reports</h2>
+<pre><code>intentsutra report --out reports          # traceability: JSON, Markdown, HTML, feature file
+intentsutra audit  --out audit-out        # independent audit: JSON, Markdown, HTML
+intentsutra verify --report audit-out/audit-report.json</code></pre>
+<p>Open <code>audit-out/audit-report.html</code> in any browser. It is a single responsive file with light and dark themes and a print style.</p>
+<h2 id="9-reading-an-audit-verdict">9. Reading an audit verdict</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Verdict</th><th scope="col">Meaning</th></tr></thead><tbody><tr><td><code>PASS</code></td><td>no failed checks</td></tr><tr><td><code>PASS-WITH-FINDINGS</code></td><td>only medium or low findings, such as approvals with unanswered questions</td></tr><tr><td><code>FAIL</code></td><td>a critical or high check failed: broken chain, edited registry, drifted evidence, upgraded label</td></tr></tbody></table></div>
+<p>Use <code>--strict</code> in CI to turn FAIL into exit code 2.</p>
+<h2 id="10-use-with-an-ai-coding-assistant">10. Use with an AI coding assistant</h2>
+<pre><code>intentsutra install-ide --host claude --target ./my-project</code></pre>
+<p>Copies instructions into <code>./my-project/intentsutra/</code>. It never edits global settings and refuses to overwrite without <code>--force</code>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="scroll"><table><thead><tr><th scope="col">Message</th><th scope="col">Fix</th></tr></thead><tbody><tr><td><code>NOT_INITIALIZED</code></td><td>run <code>intentsutra init</code> in the workspace</td></tr><tr><td><code>STALE_REVISION</code></td><td>read the current revision with <code>list</code>, then retry</td></tr><tr><td><code>PATH_ESCAPE</code></td><td>the file must be inside the workspace</td></tr><tr><td><code>INSUFFICIENT_EVIDENCE</code></td><td>add the missing approval or evidence for the current revision</td></tr><tr><td><code>AUDIT_TAMPER</code></td><td>the audit log was edited; restore it from a backup, do not delete lines</td></tr></tbody></table></div><div class="pager"><a href="04-technical-reference.html">← Technical Reference</a><a href="06-security-and-privacy.html">Security and Privacy →</a></div><footer>IntentSutra AI 0.2.0 · created by Vatsal Shah · Apache-2.0 · generated 2026-11-21 · figures from the recorded test run of 2026-11-21T20:41:52.819Z</footer></main></div></body></html>

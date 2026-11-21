@@ -1,0 +1,9 @@
+$ intentsutra revise --id REQ-TEAM-001 --revision 1 --file v2.json
+{
+  "id": "REQ-TEAM-001",
+  "revision": 2,
+  "changed": true,
+  "staleLinks": 3
+}
+
+[exit 0]

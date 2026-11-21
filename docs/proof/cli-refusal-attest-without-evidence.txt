@@ -1,0 +1,6 @@
+$ intentsutra attest --id REQ-TEAM-001 --revision 1 --reviewer Asha --note looks done --confirm-human
+
+[stderr]
+INSUFFICIENT_EVIDENCE: Need current approval, code, imported passed test-run and imported release evidence
+
+[exit 1]

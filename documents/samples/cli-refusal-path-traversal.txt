@@ -1,0 +1,6 @@
+$ intentsutra ingest --file ../outside.json
+
+[stderr]
+PATH_ESCAPE: Path escapes approved workspace
+
+[exit 1]

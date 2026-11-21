@@ -1,0 +1,6 @@
+$ intentsutra link --id REQ-TEAM-001 --revision 1 --kind code --ref impl.js
+
+[stderr]
+STALE_REVISION: Revision mismatch; evidence must be revision-bound
+
+[exit 1]

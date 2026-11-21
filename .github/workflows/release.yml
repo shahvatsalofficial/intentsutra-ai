@@ -1,0 +1,40 @@
+name: Release
+on:
+  push:
+    tags: ['v*.*.*']
+  workflow_dispatch:
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm test
+      - name: Verify tag matches package version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: test "v$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME}"
+      - name: Check whether this version is already on npm
+        id: published
+        run: |
+          V=$(node -p "require('./package.json').version")
+          if npm view "intentsutra-ai@${V}" version >/dev/null 2>&1; then
+            echo "already=true" >> "$GITHUB_OUTPUT"; echo "intentsutra-ai@${V} is already published; nothing to do."
+          elif npm view intentsutra-ai name >/dev/null 2>&1; then
+            echo "already=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "already=first" >> "$GITHUB_OUTPUT"
+            echo "::warning::intentsutra-ai does not exist on npm yet. Trusted publishing cannot be configured before the first publish: publish once manually (npm publish --access public), then link this repository and release.yml as the trusted publisher."
+          fi
+      - name: Use npm with trusted-publishing (OIDC) support
+        if: steps.published.outputs.already == 'false'
+        run: npm install -g npm@latest
+      - name: Publish to npm (trusted publishing, no stored token)
+        if: steps.published.outputs.already == 'false'
+        run: npm publish --provenance --access public

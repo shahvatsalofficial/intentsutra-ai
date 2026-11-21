@@ -1,0 +1,9 @@
+$ intentsutra init
+{
+  "schemaVersion": "1.0",
+  "projectId": "intent-844ae23c37",
+  "createdAt": "2026-11-21T20:41:39.627Z",
+  "requirements": []
+}
+
+[exit 0]

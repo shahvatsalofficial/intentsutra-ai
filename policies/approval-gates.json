@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "neverInferCompletionFrom": [
+    "ticket",
+    "pr",
+    "code-file",
+    "test-file",
+    "imported-test-run",
+    "imported-release-claim"
+  ],
+  "humanApproval": {
+    "required": true,
+    "identityVerifiedInStarter": false
+  },
+  "staleRevisionBlocksCurrentEvidence": true,
+  "automatedReleaseClaim": false
+}

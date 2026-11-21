@@ -1,0 +1,14 @@
+IntentSutra AI
+Copyright 2026 Vatsal Shah
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+This product includes no third-party code, model weights or datasets. It has zero
+runtime dependencies (Node.js built-ins only). Everything under fixtures/ is synthetic,
+written for this project, and describes no real company, person, model release or customer.
+
+Third-party names (NIST, ISO/IEC, OECD, European Union, Claude, Anthropic, Cursor, Codex, OpenAI,
+GitHub, GitHub Copilot, Gemini, Google, Windsurf, Cline, Roo Code, Continue, Model Context Protocol,
+Node.js, npm) are trademarks or names of their respective owners and are used only to describe
+compatibility targets or informational mapping. No affiliation or endorsement is implied.
+IntentSutra AI does not reproduce copyrighted standard text.

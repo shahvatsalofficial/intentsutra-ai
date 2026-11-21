@@ -1,0 +1,34 @@
+$ intentsutra impact --id REQ-TEAM-001
+{
+  "id": "REQ-TEAM-001",
+  "revision": 2,
+  "history": [
+    {
+      "revision": 1,
+      "contentHash": "1b4b00646b3cedb20ca2bbe077ba7556775e10f300e0b74deea7600ce4539e16",
+      "changedAt": "2026-11-21T20:41:47.110Z"
+    }
+  ],
+  "staleApprovals": 1,
+  "staleEvidence": [
+    {
+      "kind": "code",
+      "ref": "impl.js",
+      "revision": 1
+    },
+    {
+      "kind": "test-run",
+      "ref": "run-log.txt",
+      "revision": 1
+    },
+    {
+      "kind": "release",
+      "ref": "release-note.txt",
+      "revision": 1
+    }
+  ],
+  "staleAttestations": 1,
+  "action": "Re-review and relink evidence for the current revision; never carry forward completion."
+}
+
+[exit 0]

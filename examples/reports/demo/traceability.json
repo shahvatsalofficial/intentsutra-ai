@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "1.0",
+  "projectId": "intent-10d6aee40a",
+  "summary": {
+    "total": 6,
+    "approved": 0,
+    "humanAttested": 0,
+    "unverified": 6,
+    "unansweredQuestions": 16
+  },
+  "audit": {
+    "valid": true,
+    "events": 6
+  },
+  "requirements": [
+    {
+      "id": "REQ-TEAM-001",
+      "title": "Invite team member by email",
+      "revision": 1,
+      "contentHash": "1b4b00646b3cedb20ca2bbe077ba7556775e10f300e0b74deea7600ce4539e16",
+      "approval": "not-approved",
+      "state": "needs-stakeholder-approval",
+      "coverage": {
+        "codeObserved": false,
+        "testFileObserved": true,
+        "importedTestPass": false,
+        "importedReleaseClaim": false,
+        "humanAttestation": false,
+        "ticketOrPrReferences": 0
+      },
+      "currentEvidence": [
+        {
+          "kind": "test",
+          "ref": "fixtures/evidence-1.txt",
+          "sha256": "c8d863e9caf220272cf055f06e2533c2bc15107d49ed41efab24e2244da42fde",
+          "outcome": "unknown",
+          "provenance": "local-file-hash-observed",
+          "integrity": "hash-match"
+        }
+      ],
+      "staleEvidenceCount": 0,
+      "unansweredQuestions": [
+        "Who can invite whom, assign which roles, revoke invitations, and prevent privilege escalation?",
+        "What happens when an invitation expires, is duplicated, is rejected, or delivery fails?"
+      ],
+      "caveat": "References and imported results do not independently establish implementation, test execution, or release completion."
+    },
+    {
+      "id": "REQ-TEAM-002",
+      "title": "Assign role to invited member",
+      "revision": 1,
+      "contentHash": "7fff4470896660cd4d8a6a99a58075ece9d6fc9f29e4da17a305ba07d5b5f4d7",
+      "approval": "not-approved",
+      "state": "needs-stakeholder-approval",
+      "coverage": {
+        "codeObserved": false,
+        "testFileObserved": true,
+        "importedTestPass": false,
+        "importedReleaseClaim": false,
+        "humanAttestation": false,
+        "ticketOrPrReferences": 0
+      },
+      "currentEvidence": [
+        {
+          "kind": "test",
+          "ref": "fixtures/evidence-2.txt",
+          "sha256": "b948fc4c83248f27bc89e9355adb60271acc6c87b5b452525562fadcf810d2e1",
+          "outcome": "unknown",
+          "provenance": "local-file-hash-observed",
+          "integrity": "hash-match"
+        }
+      ],
+      "staleEvidenceCount": 0,
+      "unansweredQuestions": [
+        "Who can invite whom, assign which roles, revoke invitations, and prevent privilege escalation?",
+        "What happens when an invitation expires, is duplicated, is rejected, or delivery fails?"
+      ],
+      "caveat": "References and imported results do not independently establish implementation, test execution, or release completion."
+    },
+    {
+      "id": "REQ-TEAM-003",
+      "title": "Accept invitation",
+      "revision": 1,
+      "contentHash": "f9344a66d846229b685542cb96e5e32d0aa7ce503717afd0e182e3a978ea8256",
+      "approval": "not-approved",
+      "state": "needs-stakeholder-approval",
+      "coverage": {
+        "codeObserved": false,
+        "testFileObserved": true,
+        "importedTestPass": false,
+        "importedReleaseClaim": false,
+        "humanAttestation": false,
+        "ticketOrPrReferences": 0
+      },
+      "currentEvidence": [
+        {
+          "kind": "test",
+          "ref": "fixtures/evidence-3.txt",
+          "sha256": "e372690b4fc346fcecfb834231b55cef3121a82a14bcc42a1fc63eb518250784",
+          "outcome": "unknown",
+          "provenance": "local-file-hash-observed",
+          "integrity": "hash-match"
+        }
+      ],
+      "staleEvidenceCount": 0,
+      "unansweredQuestions": [
+        "Who can invite whom, assign which roles, revoke invitations, and prevent privilege escalation?",
+        "What happens when an invitation expires, is duplicated, is rejected, or delivery fails?"
+      ],
+      "caveat": "References and imported results do not independently establish implementation, test execution, or release completion."
+    },
+    {
+      "id": "REQ-TEAM-004",
+      "title": "Revoke pending invitation",
+      "revision": 1,
+      "contentHash": "ae00f7efa4e79a179d68120729cbf8451bea012e89c736d2f6f8f22859bd93e2",
+      "approval": "not-approved",
+      "state": "needs-stakeholder-approval",
+      "coverage": {
+        "codeObserved": false,
+        "testFileObserved": false,
+        "importedTestPass": false,
+        "importedReleaseClaim": false,
+        "humanAttestation": false,
+        "ticketOrPrReferences": 0
+      },
+      "currentEvidence": [],
+      "staleEvidenceCount": 0,
+      "unansweredQuestions": [
+        "Who can invite whom, assign which roles, revoke invitations, and prevent privilege escalation?",
+        "What happens when an invitation expires, is duplicated, is rejected, or delivery fails?"
+      ],
+      "caveat": "References and imported results do not independently establish implementation, test execution, or release completion."
+    },
+    {
+      "id": "REQ-TEAM-005",
+      "title": "Handle invitation errors",
+      "revision": 1,
+      "contentHash": "5f9d23504c34059a0d74199084e74bbeb094ba16a9238a75a72645106c5f9ced",
+      "approval": "not-approved",
+      "state": "needs-stakeholder-approval",
+      "coverage": {
+        "codeObserved": false,
+        "testFileObserved": false,
+        "importedTestPass": false,
+        "importedReleaseClaim": false,
+        "humanAttestation": false,
+        "ticketOrPrReferences": 0
+      },
+      "currentEvidence": [],
+      "staleEvidenceCount": 0,
+      "unansweredQuestions": [
+        "Who can invite whom, assign which roles, revoke invitations, and prevent privilege escalation?",
+        "What happens when an invitation expires, is duplicated, is rejected, or delivery fails?"
+      ],
+      "caveat": "References and imported results do not independently establish implementation, test execution, or release completion."
+    },
+    {
+      "id": "REQ-B6F280E981",
+      "title": "Add team invitations with roles",
+      "revision": 1,
+      "contentHash": "41b28cf371246d020a87bcb17c4cc1e5dacae96cb16d0cc38b8c78fcace9fb79",
+      "approval": "not-approved",
+      "state": "needs-stakeholder-approval",
+      "coverage": {
+        "codeObserved": false,
+        "testFileObserved": false,
+        "importedTestPass": false,
+        "importedReleaseClaim": false,
+        "humanAttestation": false,
+        "ticketOrPrReferences": 0
+      },
+      "currentEvidence": [],
+      "staleEvidenceCount": 0,
+      "unansweredQuestions": [
+        "Who is authorized to perform this task, and which personas are excluded?",
+        "What event or user action starts the behavior?",
+        "What limits, failure conditions, permissions and nonfunctional constraints apply?",
+        "Which stakeholder-approved, independently testable acceptance examples define success?",
+        "Who can invite whom, assign which roles, revoke invitations, and prevent privilege escalation?",
+        "What happens when an invitation expires, is duplicated, is rejected, or delivery fails?"
+      ],
+      "caveat": "References and imported results do not independently establish implementation, test execution, or release completion."
+    }
+  ],
+  "disclaimer": "This is a traceability and evidence review, not an automatic completion, certification or compliance determination."
+}

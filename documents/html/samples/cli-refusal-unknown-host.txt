@@ -1,0 +1,6 @@
+$ intentsutra install-ide --host ../x --target C:\Users\VATSAL~1\AppData\Local\Temp\intsut-proof-vok22v\ide
+
+[stderr]
+INVALID_HOST: Unknown host
+
+[exit 1]

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "IntentSutra evidence link v1.0",
+  "type": "object",
+  "required": [
+    "kind",
+    "ref",
+    "revision",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "enum": [
+        "code",
+        "test",
+        "test-run",
+        "release",
+        "ticket",
+        "pr"
+      ]
+    },
+    "ref": {
+      "type": "string"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "string"
+    }
+  }
+}

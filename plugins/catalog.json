@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "owner": "Vatsal Shah",
+  "plugins": [
+    {
+      "id": "github",
+      "purpose": "Issue/PR read-only metadata",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "clickup",
+      "purpose": "Task import",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "jira",
+      "purpose": "Requirements import",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "spec-kit",
+      "purpose": "Specification artifacts",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "openspec",
+      "purpose": "Change proposals",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "playwright",
+      "purpose": "Isolated test execution",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "mcp",
+      "purpose": "Read-only requirement tools",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    },
+    {
+      "id": "git",
+      "purpose": "Local diff analysis",
+      "status": "candidate-not-integrated",
+      "approvalRequired": true
+    }
+  ],
+  "globalInstallationPerformed": false
+}

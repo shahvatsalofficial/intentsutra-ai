@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/intentsutra/requirement.schema.json",
+  "title": "IntentSutra requirement record v1.0",
+  "type": "object",
+  "required": [
+    "id",
+    "revision",
+    "title",
+    "contentHash",
+    "approvals",
+    "links",
+    "history"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^REQ-[A-Z0-9-]{3,40}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 200
+    },
+    "actor": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "behavior": {
+      "type": "string"
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "acceptance": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contentHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "approvals": {
+      "type": "array"
+    },
+    "links": {
+      "type": "array"
+    },
+    "history": {
+      "type": "array"
+    }
+  }
+}

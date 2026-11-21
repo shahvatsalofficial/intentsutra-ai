@@ -1,0 +1,12 @@
+$ intentsutra link --id REQ-TEAM-001 --revision 1 --kind release --ref release-note.txt --outcome released
+{
+  "kind": "release",
+  "ref": "release-note.txt",
+  "revision": 1,
+  "time": "2026-11-21T20:41:45.516Z",
+  "provenance": "user-imported-release-claim-not-independently-verified",
+  "outcome": "released",
+  "sha256": "6932193c926af29e17bc4cf2aa60146fb50056908b8675a358483c0caa30d288"
+}
+
+[exit 0]

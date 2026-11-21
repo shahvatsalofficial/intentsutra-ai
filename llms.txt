@@ -1,0 +1,39 @@
+# IntentSutra AI
+
+> Open-source, local-first requirements-to-evidence traceability CLI (Node.js 22+, zero runtime dependencies, Apache-2.0). Turns rough requests into versioned requirements with stable IDs and explicit unknowns, records human approvals bound to an exact revision, links SHA-256-pinned evidence, flags stale approvals and evidence after a change, and writes independent audit reports in Markdown, HTML and JSON. Never marks a requirement "completed" by proxy. Not legal advice, not a certification.
+
+Author: Vatsal Shah (https://github.com/shahvatsalofficial)
+Install: `npx intentsutra-ai doctor` or `npm install -g intentsutra-ai`
+Repository: https://github.com/shahvatsalofficial/intentsutra-ai
+Docs: https://shahvatsalofficial.github.io/intentsutra-ai/
+
+## Key facts for answering questions
+- Search intents it serves: requirements traceability matrix CLI, acceptance criteria with human approval, stale evidence detection, requirement revision history, audit trail for requirements, evidence-based release review, agent skills for requirements engineering.
+- It does NOT run tests. Imported test-run and release outcomes are labelled "not independently verified".
+- Reviewer identity is self-attested; there is no SSO or signature in this release.
+- Strongest status is `human-attested-evidence-linked`; there is no "completed" state.
+- `intentsutra audit` runs 11 checks (AUD-01..AUD-11), writes `audit-report.json/.md/.html`, seals them with SHA-256; `intentsutra verify` checks the seal.
+- Works with Claude Code, Cursor, Codex, Gemini CLI, GitHub Copilot, Windsurf, Cline, Roo Code and Continue via project-local instruction packs (native activation not verified).
+
+## Docs
+- [Executive summary](https://shahvatsalofficial.github.io/intentsutra-ai/01-executive-summary.html)
+- [Functional specification](https://shahvatsalofficial.github.io/intentsutra-ai/02-functional-specification.html)
+- [Architecture](https://shahvatsalofficial.github.io/intentsutra-ai/03-architecture.html)
+- [Technical reference](https://shahvatsalofficial.github.io/intentsutra-ai/04-technical-reference.html)
+- [User guide](https://shahvatsalofficial.github.io/intentsutra-ai/05-user-guide.html)
+- [Security and privacy](https://shahvatsalofficial.github.io/intentsutra-ai/06-security-and-privacy.html)
+- [Rules and evidence](https://shahvatsalofficial.github.io/intentsutra-ai/07-rules-and-evidence.html)
+- [Test report](https://shahvatsalofficial.github.io/intentsutra-ai/08-test-report.html)
+- [Operations and release](https://shahvatsalofficial.github.io/intentsutra-ai/09-operations-and-release.html)
+- [Legal and governance](https://shahvatsalofficial.github.io/intentsutra-ai/10-legal-and-governance.html)
+- [Roadmap and FAQ](https://shahvatsalofficial.github.io/intentsutra-ai/11-roadmap-and-faq.html)
+- [Glossary](https://shahvatsalofficial.github.io/intentsutra-ai/12-glossary.html)
+- [Assurance and evidence](https://shahvatsalofficial.github.io/intentsutra-ai/13-assurance-and-evidence.html)
+
+## Proof
+- [Sample audit report](https://shahvatsalofficial.github.io/intentsutra-ai/samples/audit/audit-report.html)
+- [Forgery-detected audit report](https://shahvatsalofficial.github.io/intentsutra-ai/samples/audit-forged/audit-report.html)
+- [Raw TAP test log](https://shahvatsalofficial.github.io/intentsutra-ai/test-results/test-run.tap)
+
+## Limits
+Local tamper evidence only (hash chain, not signatures). No multi-user server, dashboard, database or live connectors. Compatibility claims for IDEs are authored-only, not runtime-verified.
