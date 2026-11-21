@@ -5,6 +5,7 @@ const cases=[
  ['unknown host rejected',()=>{const t=temp();try{assert.throws(()=>installIde(t.path,'unknown'),/Unknown host/);}finally{t.clean();}}],
  ['installs local Claude instruction pack',()=>{const t=temp();try{const r=installIde(t.path,'claude');assert.ok(fs.existsSync(path.join(r.target,'host-adapter','README.md')));assert.equal(r.globalSettingsChanged,false);}finally{t.clean();}}],
  ['installs portable skills',()=>{const t=temp();try{const r=installIde(t.path,'cursor');assert.ok(fs.existsSync(path.join(r.target,'skills','intentsutra-prime','SKILL.md')));}finally{t.clean();}}],
+ ['creates a missing target directory',()=>{const t=temp();try{const r=installIde(path.join(t.path,'new','proj'),'claude');assert.ok(fs.existsSync(path.join(r.target,'skills','intentsutra-prime','SKILL.md')));}finally{t.clean();}}],
  ['refuses overwrite without force',()=>{const t=temp();try{installIde(t.path,'codex');assert.throws(()=>installIde(t.path,'codex'),/exists/);}finally{t.clean();}}],
  ['force overwrites project-local pack',()=>{const t=temp();try{installIde(t.path,'codex');assert.equal(installIde(t.path,'codex',{force:true}).host,'codex');}finally{t.clean();}}],
  ['refuses symlink target',()=>{const t=temp();try{symlinkSync(t.path,path.join(t.path,'intentsutra'));assert.throws(()=>installIde(t.path,'gemini',{force:true}),/symlink/);}finally{t.clean();}}],
