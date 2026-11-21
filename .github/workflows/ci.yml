@@ -76,7 +76,8 @@ jobs:
           npx intentsutra install-ide --host claude --target ./proj >/dev/null
           test -f ./proj/intentsutra/skills/intentsutra-prime/SKILL.md
           test -f ./proj/intentsutra/host-adapter/README.md
-  secrets-scan:    name: secret scan
+  secrets-scan:
+    name: secret scan
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
