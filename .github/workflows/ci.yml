@@ -76,4 +76,12 @@ jobs:
           npx intentsutra install-ide --host claude --target ./proj >/dev/null
           test -f ./proj/intentsutra/skills/intentsutra-prime/SKILL.md
           test -f ./proj/intentsutra/host-adapter/README.md
-  secrets-scan:
+  secrets-scan:    name: secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Scan for committed tokens
+        run: |
+          if git grep -nE '(ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|npm_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----)' -- . ':!tests'; then echo "Possible secret committed"; exit 1; fi
