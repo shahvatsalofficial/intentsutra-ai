@@ -1,7 +1,7 @@
 # Functional Specification
 
 ## Scope
-In scope for 0.2.0: local Markdown/JSON import, schema validation, deterministic question prompts, reviewable acceptance scenarios, explicit self-attested approval, revision history, evidence links with SHA-256, change impact, traceability reports, independent audit report, audit chain, authenticated loopback read-only API, project-local IDE instruction packs.
+In scope for 0.2.1: local Markdown/JSON import, schema validation, deterministic question prompts, reviewable acceptance scenarios, explicit self-attested approval, revision history, evidence links with SHA-256, change impact, traceability reports, independent audit report, audit chain, authenticated loopback read-only API, project-local IDE instruction packs.
 
 Out of scope (planned): natural-language semantic extraction, rich Markdown grammar, executing tests, authenticated stakeholder review, ticketing sync, dashboard, enterprise SSO/RBAC.
 

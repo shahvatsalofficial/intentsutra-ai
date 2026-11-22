@@ -1,6 +1,6 @@
 {
   "name": "intentsutra-ai",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "type": "module",
   "description": "IntentSutra AI: local-first requirements-to-evidence traceability CLI. Revision-bound requirement IDs, explicit unknowns, human approvals, hash-pinned evidence, stale-evidence detection, hash-chained audit log and independent audit reports in Markdown, HTML and JSON. 21 agent roles, 26 portable skills. Zero dependencies, no API keys.",

@@ -3,7 +3,7 @@ $ intentsutra link --id REQ-TEAM-001 --revision 1 --kind release --ref release-n
   "kind": "release",
   "ref": "release-note.txt",
   "revision": 1,
-  "time": "2026-11-22T18:34:57.918Z",
+  "time": "2026-11-22T18:42:58.904Z",
   "provenance": "user-imported-release-claim-not-independently-verified",
   "outcome": "released",
   "sha256": "6932193c926af29e17bc4cf2aa60146fb50056908b8675a358483c0caa30d288"

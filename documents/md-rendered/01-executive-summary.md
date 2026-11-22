@@ -1,6 +1,6 @@
 # Executive Summary
 
-**IntentSutra AI** is a local-first, open-source command-line workbench that turns a rough feature request into versioned, reviewable requirements and then keeps an honest record of the evidence behind each one. Its single organizing rule: **it must be harder, not easier, to claim a requirement is complete without real, reviewable proof.** Version 0.2.0, Apache-2.0, created by Vatsal Shah.
+**IntentSutra AI** is a local-first, open-source command-line workbench that turns a rough feature request into versioned, reviewable requirements and then keeps an honest record of the evidence behind each one. Its single organizing rule: **it must be harder, not easier, to claim a requirement is complete without real, reviewable proof.** Version 0.2.1, Apache-2.0, created by Vatsal Shah.
 
 ## The problem
 Teams routinely treat a closed ticket, a merged pull request, a test file or a green status field as proof that a requirement is done. None of these is proof. Approvals get attached to text that later changed. Evidence goes stale silently. Auditors then cannot tell what was actually reviewed, by whom, against which version.
@@ -23,7 +23,7 @@ Teams routinely treat a closed ticket, a merged pull request, a test file or a g
 - It gives no legal advice and certifies nothing.
 
 ## Evidence this release works
-Recorded 2026-11-22T18:35:02.198Z on Node v24.15.0 (win32/x64):
+Recorded 2026-11-22T18:43:05.809Z on Node v24.15.0 (win32/x64):
 
 | Check | Result |
 |---|---|

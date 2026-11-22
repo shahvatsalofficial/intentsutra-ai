@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 — 2026-11-23
+- Release workflow publishes to npm via trusted publishing (OIDC) from a version tag, including the first publish.
+- Regenerated proof and documents.
+
 ## 0.2.0 — 2026-11-22
 ### Added
 - `intentsutra audit`: independent audit with 11 checks (hash chain, content hashes, evidence drift, false completion, revision binding, unverified labels, identity claims, registry-vs-log consistency, source provenance, stale evidence, proof-by-proxy gaps). Writes sealed `audit-report.json`, `.md` and `.html`.

@@ -26,11 +26,8 @@ jobs:
           V=$(node -p "require('./package.json').version")
           if npm view "intentsutra-ai@${V}" version >/dev/null 2>&1; then
             echo "already=true" >> "$GITHUB_OUTPUT"; echo "intentsutra-ai@${V} is already published; nothing to do."
-          elif npm view intentsutra-ai name >/dev/null 2>&1; then
-            echo "already=false" >> "$GITHUB_OUTPUT"
           else
-            echo "already=first" >> "$GITHUB_OUTPUT"
-            echo "::warning::intentsutra-ai does not exist on npm yet. Trusted publishing cannot be configured before the first publish: publish once manually (npm publish --access public), then link this repository and release.yml as the trusted publisher."
+            echo "already=false" >> "$GITHUB_OUTPUT"
           fi
       - name: Use npm with trusted-publishing (OIDC) support
         if: steps.published.outputs.already == 'false'

@@ -1,8 +1,8 @@
 # IntentSutra AI — Independent Audit Report
 
-**Verdict: PASS** · Project `intent-3d3a278043` · Generated 2026-11-22T18:35:00.478Z
+**Verdict: PASS** · Project `intent-00700aac2c` · Generated 2026-11-22T18:43:02.982Z
 
-Seal (SHA-256): `c518735ec8389c9187e8061a6b25f786cf2449055f95f10aedca563eb72433c1`
+Seal (SHA-256): `813af38b8b1259fe9f434f168a677c1e78e8cab52c646dd00471f7c936547169`
 
 Requirements 5 · Checks 11 · Passed 11 · Failed 0 · Audit events 8 · Human-attested 0
 

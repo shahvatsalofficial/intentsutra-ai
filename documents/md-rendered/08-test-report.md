@@ -1,6 +1,6 @@
 # Test Report
 
-Recorded by `npm run proof` on **2026-11-22T18:35:02.198Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.0**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
+Recorded by `npm run proof` on **2026-11-22T18:43:05.809Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.1**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
 
 ## Summary
 | Suite | Result |

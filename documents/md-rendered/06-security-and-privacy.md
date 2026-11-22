@@ -4,7 +4,7 @@
 Everything stays on your machine. There are no network calls, no telemetry and no API keys. The tool reads only files you point it at, inside the workspace, and writes only `.intentsutra/` and report folders you choose.
 
 ## Threat model
-| Threat | Control in 0.2.0 | Test |
+| Threat | Control in 0.2.1 | Test |
 |---|---|---|
 | Prompt injection in requirement or issue text | text is data; no LLM in the CLI; source labelled `untrusted-input` | requirements tests |
 | Path traversal | `inside()` resolves against the real workspace root and rejects escapes | `refuses path traversal` |

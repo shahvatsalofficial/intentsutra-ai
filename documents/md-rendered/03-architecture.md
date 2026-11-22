@@ -8,7 +8,7 @@
 5. **Tamper evidence, honestly labelled.** SHA-256 chains and seals detect edits; they are not signatures.
 
 ## Layers
-| Layer | Implementation in 0.2.0 | Status |
+| Layer | Implementation in 0.2.1 | Status |
 |---|---|---|
 | Business | Roles: product owner approves, engineer links, auditor verifies | implemented as process contract |
 | Capability | intake, elicitation, versioning, acceptance, approval, evidence graph, impact, reports, audit | implemented |
