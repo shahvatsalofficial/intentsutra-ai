@@ -3,7 +3,7 @@ $ intentsutra attest --id REQ-TEAM-001 --revision 1 --reviewer Asha --note Evide
   "revision": 1,
   "reviewer": "Asha",
   "note": "Evidence reviewed by hand",
-  "time": "2026-11-21T20:41:46.295Z",
+  "time": "2026-11-22T18:34:58.334Z",
   "kind": "local-self-attested-review",
   "identityVerified": false
 }

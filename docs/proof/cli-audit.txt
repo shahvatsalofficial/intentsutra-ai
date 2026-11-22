@@ -2,7 +2,7 @@ $ intentsutra audit --out audit-sample
 {
   "valid": true,
   "count": 8,
-  "lastHash": "ce77dc0531b59898c4c47404daa93383bc0c09a869bd29997e871c6ca3c9770a",
+  "lastHash": "14b0d4b218d94e76717cd43480bb2676aae7d58f093c63e57f4d2e589f74ce06",
   "verdict": "PASS",
   "summary": {
     "requirements": 5,
@@ -18,12 +18,12 @@ $ intentsutra audit --out audit-sample
     },
     "attested": 0,
     "auditEvents": 8,
-    "auditChainHead": "ce77dc0531b59898c4c47404daa93383bc0c09a869bd29997e871c6ca3c9770a"
+    "auditChainHead": "14b0d4b218d94e76717cd43480bb2676aae7d58f093c63e57f4d2e589f74ce06"
   },
   "files": {
-    "json": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-vok22v\\audit-sample\\audit-report.json",
-    "markdown": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-vok22v\\audit-sample\\audit-report.md",
-    "html": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-vok22v\\audit-sample\\audit-report.html"
+    "json": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-TcIgwQ\\audit-sample\\audit-report.json",
+    "markdown": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-TcIgwQ\\audit-sample\\audit-report.md",
+    "html": "C:\\Users\\VATSAL~1\\AppData\\Local\\Temp\\intsut-proof-TcIgwQ\\audit-sample\\audit-report.html"
   }
 }
 

@@ -1,11 +1,11 @@
 # Test Report
 
-Recorded by `npm run proof` on **2026-11-21T20:41:52.819Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.0**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
+Recorded by `npm run proof` on **2026-11-22T18:35:02.198Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.0**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
 
 ## Summary
 | Suite | Result |
 |---|---|
-| Automated tests (`node --test`) | 117 total, **115 passed**, 0 failed, 2 skipped |
+| Automated tests (`node --test`) | 118 total, **116 passed**, 0 failed, 2 skipped |
 | Independent audit (honest demo workspace) | 11 checks: 11 passed, 0 failed; verdict `PASS` |
 | Independent audit (after silent registry edit) | verdict `FAIL` |
 | Fuzzing, fixed seed | 5398 generated inputs; 0 unexpected exceptions or undetected tampering |

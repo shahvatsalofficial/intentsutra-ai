@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "tool": "intentsutra-ai",
-  "generatedAt": "2026-11-21T20:41:52.773Z",
-  "projectId": "intent-844ae23c37",
+  "generatedAt": "2026-11-22T18:35:02.115Z",
+  "projectId": "intent-3d3a278043",
   "verdict": "FAIL",
   "summary": {
     "requirements": 5,
@@ -18,7 +18,7 @@
     },
     "attested": 0,
     "auditEvents": 8,
-    "auditChainHead": "ce77dc0531b59898c4c47404daa93383bc0c09a869bd29997e871c6ca3c9770a"
+    "auditChainHead": "14b0d4b218d94e76717cd43480bb2676aae7d58f093c63e57f4d2e589f74ce06"
   },
   "checks": [
     {
@@ -173,5 +173,5 @@
     "The audit chain is tamper-evident for edits, not tamper-proof against a full rewrite.",
     "Secret redaction is heuristic. A PASS verdict is not a certification, legal opinion or proof that software is correct."
   ],
-  "seal": "26007ca3c9667f0b68d261d87edb5d4c061b7ce4cb1766a3e74c9e3a2ba16075"
+  "seal": "db49881ecc31b37f4b960cbb88a3c087b1d6934c2225a18dda03141d2f0cd9a1"
 }

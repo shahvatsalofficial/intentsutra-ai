@@ -6,7 +6,7 @@ $ intentsutra impact --id REQ-TEAM-001
     {
       "revision": 1,
       "contentHash": "1b4b00646b3cedb20ca2bbe077ba7556775e10f300e0b74deea7600ce4539e16",
-      "changedAt": "2026-11-21T20:41:47.110Z"
+      "changedAt": "2026-11-22T18:34:58.758Z"
     }
   ],
   "staleApprovals": 1,
