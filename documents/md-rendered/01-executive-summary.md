@@ -27,11 +27,11 @@ Teams routinely treat a closed ticket, a merged pull request, a test file or a g
 - It gives no legal advice and certifies nothing.
 
 ## Evidence this release works
-Recorded 2026-11-24T18:42:25.993Z on Node v24.15.0 (win32/x64):
+Recorded 2026-11-24T18:56:07.135Z on Node v24.15.0 (win32/x64):
 
 | Check | Result |
 |---|---|
-| Automated tests | 122 total, **119 passed**, 1 failed, 2 skipped |
+| Automated tests | 122 total, **120 passed**, 0 failed, 2 skipped |
 | Independent audit of the demo workspace | 11 of 11 checks passed; verdict `PASS` |
 | Same workspace after a silent registry edit | verdict `FAIL` (forgery detected) |
 | Fuzzing, fixed seed | 5398 generated inputs, 0 unexpected exceptions or undetected tampering |

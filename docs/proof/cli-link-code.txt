@@ -3,7 +3,7 @@ $ intentsutra link --id REQ-TEAM-001 --revision 1 --kind code --ref impl.js
   "kind": "code",
   "ref": "impl.js",
   "revision": 1,
-  "time": "2026-11-24T18:42:07.259Z",
+  "time": "2026-11-24T18:55:48.363Z",
   "provenance": "local-file-hash-observed",
   "outcome": "unknown",
   "sha256": "5ed39ad7fc64364476926b32fc2bcc7a8b11db06b0b5683909fcf9223f28d11b"

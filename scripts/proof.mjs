@@ -17,13 +17,14 @@ import {IntentError, sha256} from '../packages/core/common.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'docs', 'proof');
 const VERSION = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
-fs.rmSync(OUT, {recursive: true, force: true});
-fs.mkdirSync(OUT, {recursive: true});
 const cli = path.join(ROOT, 'packages/cli/index.mjs');
 
 // 1. Raw TAP test run
 const testFiles = fs.readdirSync(path.join(ROOT, 'tests')).filter(f => f.endsWith('.test.mjs')).sort().map(f => path.join('tests', f));
 const t = spawnSync(process.execPath, ['--test', '--test-reporter=tap', ...testFiles], {cwd: ROOT, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024});
+// The docs test builds the site from the previous proof, so wipe docs/proof only after the test run.
+fs.rmSync(OUT, {recursive: true, force: true});
+fs.mkdirSync(OUT, {recursive: true});
 fs.writeFileSync(path.join(OUT, 'test-run.tap'), t.stdout);
 const num = k => Number(new RegExp(`^# ${k} (\\d+)`, 'm').exec(t.stdout)?.[1] ?? NaN);
 const tests = num('tests'), pass = num('pass'), fail = num('fail'), skipped = num('skipped');

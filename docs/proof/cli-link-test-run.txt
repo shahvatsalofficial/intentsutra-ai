@@ -3,7 +3,7 @@ $ intentsutra link --id REQ-TEAM-001 --revision 1 --kind test-run --ref run-log.
   "kind": "test-run",
   "ref": "run-log.txt",
   "revision": 1,
-  "time": "2026-11-24T18:42:09.591Z",
+  "time": "2026-11-24T18:55:50.301Z",
   "provenance": "user-imported-test-result-not-independently-verified",
   "outcome": "passed",
   "sha256": "892e96ed840c6076c8009469b5e5b8f6ff023fe0f089f9a464459b0db03b7b74"

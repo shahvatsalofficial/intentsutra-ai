@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.3 — 2026-11-25
+- Fix: the proof script wiped docs/proof before running the docs test, so the recorded 0.2.2 run showed 1 failure. Proof now wipes it after the test run. Regenerated proof and documents: 122 tests, 120 passed, 0 failed, 2 skipped.
+
 ## 0.2.2 — 2026-11-25
 - Documentation website redesigned: light by default with a dark toggle, responsive landing page, sidebar and on-page navigation, search, 8 theme-aware diagrams, charts generated from the proof pack, and a new Real-World Scenarios page with seven flowcharts.
 - Docs build test: every page is light by default, every internal link and anchor resolves, diagrams and charts render.

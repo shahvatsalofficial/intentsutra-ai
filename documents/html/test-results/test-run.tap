@@ -2,783 +2,741 @@ TAP version 13
 # Subtest: audit of a fresh workspace has no critical or high failures
 ok 1 - audit of a fresh workspace has no critical or high failures
   ---
-  duration_ms: 95.3351
+  duration_ms: 157.378
   type: 'test'
   ...
 # Subtest: legitimate full evidence lifecycle audits clean and stays labeled unverified
 ok 2 - legitimate full evidence lifecycle audits clean and stays labeled unverified
   ---
-  duration_ms: 243.3391
+  duration_ms: 404.1944
   type: 'test'
   ...
 # Subtest: registry edited without an audit event is detected (silent approval forgery)
 ok 3 - registry edited without an audit event is detected (silent approval forgery)
   ---
-  duration_ms: 70.1447
+  duration_ms: 128.0889
   type: 'test'
   ...
 # Subtest: forged identityVerified=true is flagged
 ok 4 - forged identityVerified=true is flagged
   ---
-  duration_ms: 97.1322
+  duration_ms: 122.457
   type: 'test'
   ...
 # Subtest: upgraded imported test-run label is flagged
 ok 5 - upgraded imported test-run label is flagged
   ---
-  duration_ms: 130.4266
+  duration_ms: 168.0104
   type: 'test'
   ...
 # Subtest: tampered audit chain fails with critical finding
 ok 6 - tampered audit chain fails with critical finding
   ---
-  duration_ms: 138.637
+  duration_ms: 118.4738
   type: 'test'
   ...
 # Subtest: evidence file modified after linking is drift
 ok 7 - evidence file modified after linking is drift
   ---
-  duration_ms: 164.3465
+  duration_ms: 174.6481
   type: 'test'
   ...
 # Subtest: edited requirement content without revision is detected by content hash
 ok 8 - edited requirement content without revision is detected by content hash
   ---
-  duration_ms: 98.4358
+  duration_ms: 142.9334
   type: 'test'
   ...
 # Subtest: revision makes old approval stale and audit still passes consistency
 ok 9 - revision makes old approval stale and audit still passes consistency
   ---
-  duration_ms: 136.5121
+  duration_ms: 189.9321
   type: 'test'
   ...
 # Subtest: test-file without passed run is reported as proof-by-proxy gap
 ok 10 - test-file without passed run is reported as proof-by-proxy gap
   ---
-  duration_ms: 162.554
+  duration_ms: 154.1313
   type: 'test'
   ...
 # Subtest: audit report seal verifies and detects modification
 ok 11 - audit report seal verifies and detects modification
   ---
-  duration_ms: 124.8297
+  duration_ms: 112.7657
   type: 'test'
   ...
 # Subtest: audit HTML and Markdown escape hostile titles and pipes
 ok 12 - audit HTML and Markdown escape hostile titles and pipes
   ---
-  duration_ms: 186.4794
+  duration_ms: 153.7585
   type: 'test'
   ...
 # Subtest: writeAuditReports writes JSON, Markdown and HTML and refuses escaping paths
 ok 13 - writeAuditReports writes JSON, Markdown and HTML and refuses escaping paths
   ---
-  duration_ms: 220.9814
+  duration_ms: 203.2349
   type: 'test'
   ...
 # Subtest: CLI: audit writes three reports, verify passes, tampered report fails verify
 ok 14 - CLI: audit writes three reports, verify passes, tampered report fails verify
   ---
-  duration_ms: 8014.6097
+  duration_ms: 4409.5732
   type: 'test'
   ...
 # Subtest: CLI: --strict exits 2 on FAIL verdict
 ok 15 - CLI: --strict exits 2 on FAIL verdict
   ---
-  duration_ms: 4809.0635
+  duration_ms: 2395.9155
   type: 'test'
   ...
 # Subtest: CLI: --confirm-human placed before other flags is still a boolean
 ok 16 - CLI: --confirm-human placed before other flags is still a boolean
   ---
-  duration_ms: 5880.1727
+  duration_ms: 1349.9491
   type: 'test'
   ...
 # Subtest: CLI: --version, bad argument and missing registry exit codes
 ok 17 - CLI: --version, bad argument and missing registry exit codes
   ---
-  duration_ms: 18268.432
+  duration_ms: 3618.5354
   type: 'test'
   ...
 # Subtest: sample imports exactly five structured requirements
 ok 18 - sample imports exactly five structured requirements
   ---
-  duration_ms: 243.0324
+  duration_ms: 284.7853
   type: 'test'
   ...
 # Subtest: three linked test files do not mean three passing tests
 ok 19 - three linked test files do not mean three passing tests
   ---
-  duration_ms: 281.5096
+  duration_ms: 302.5403
   type: 'test'
   ...
 # Subtest: sample leaves all five requirements unapproved
 ok 20 - sample leaves all five requirements unapproved
   ---
-  duration_ms: 304.8075
+  duration_ms: 323.1923
   type: 'test'
   ...
 # Subtest: sample acceptance export has five scenarios
 ok 21 - sample acceptance export has five scenarios
   ---
-  duration_ms: 622.2314
+  duration_ms: 527.1039
   type: 'test'
   ...
 # Subtest: sample report never labels a requirement completed
 ok 22 - sample report never labels a requirement completed
   ---
-  duration_ms: 366.3484
+  duration_ms: 271.668
   type: 'test'
   ...
 # Subtest: docs site builds
-not ok 23 - docs site builds
+ok 23 - docs site builds
   ---
-  duration_ms: 2.9747
+  duration_ms: 2.1563
   type: 'test'
-  location: 'E:\\Ai-Agents\\IntentSutra-AI\\tests\\docs.test.mjs:13:1'
-  failureType: 'testCodeFailure'
-  error: |-
-    node:fs:441
-        return binding.readFileUtf8(path, stringToFlags(options.flag));
-                       ^
-    
-    Error: ENOENT: no such file or directory, open 'E:\Ai-Agents\IntentSutra-AI\docs\proof\environment.json'
-        at Object.readFileSync (node:fs:441:20)
-        at rd (file:///E:/Ai-Agents/IntentSutra-AI/documents/build.mjs:18:31)
-        at file:///E:/Ai-Agents/IntentSutra-AI/documents/build.mjs:19:13
-        at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
-        at async node:internal/modules/esm/loader:639:26
-        at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
-      errno: -4058,
-      code: 'ENOENT',
-      syscall: 'open',
-      path: 'E:\\Ai-Agents\\IntentSutra-AI\\docs\\proof\\environment.json'
-    }
-    
-    Node.js v24.15.0
-    
-    
-    1 !== 0
-    
-  code: 'ERR_ASSERTION'
-  name: 'AssertionError'
-  expected: 0
-  actual: 1
-  operator: 'strictEqual'
-  stack: |-
-    Object.readFileSync (node:fs:441:20)
-    rd (file:///E:/Ai-Agents/IntentSutra-AI/documents/build.mjs:18:31)
-    file:///E:/Ai-Agents/IntentSutra-AI/documents/build.mjs:19:13
-    ModuleJob.run (node:internal/modules/esm/module_job:437:25)
-    async node:internal/modules/esm/loader:639:26
-    async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
-    TestContext.<anonymous> (file:///E:/Ai-Agents/IntentSutra-AI/tests/docs.test.mjs:13:39)
-    Test.runInAsyncScope (node:async_hooks:227:14)
-    Test.run (node:internal/test_runner/test:1201:25)
-    Test.start (node:internal/test_runner/test:1096:17)
-    startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17)
   ...
 # Subtest: every page is light by default, has a theme toggle and no unresolved placeholders
 ok 24 - every page is light by default, has a theme toggle and no unresolved placeholders
   ---
-  duration_ms: 21.1436
+  duration_ms: 105.0456
   type: 'test'
   ...
 # Subtest: every internal link and anchor resolves
 ok 25 - every internal link and anchor resolves
   ---
-  duration_ms: 82.0967
+  duration_ms: 109.5966
   type: 'test'
   ...
 # Subtest: diagrams and charts render on key pages
 ok 26 - diagrams and charts render on key pages
   ---
-  duration_ms: 1.6986
+  duration_ms: 2.0621
   type: 'test'
   ...
 # Subtest: nine host adapters declared
 ok 27 - nine host adapters declared
   ---
-  duration_ms: 1.6588
+  duration_ms: 1.829
   type: 'test'
   ...
 # Subtest: unknown host rejected
 ok 28 - unknown host rejected
   ---
-  duration_ms: 3.8589
+  duration_ms: 4.9547
   type: 'test'
   ...
 # Subtest: installs local Claude instruction pack
 ok 29 - installs local Claude instruction pack
   ---
-  duration_ms: 1373.9832
+  duration_ms: 1358.3946
   type: 'test'
   ...
 # Subtest: installs portable skills
 ok 30 - installs portable skills
   ---
-  duration_ms: 4779.5611
+  duration_ms: 1268.9146
   type: 'test'
   ...
 # Subtest: creates a missing target directory
 ok 31 - creates a missing target directory
   ---
-  duration_ms: 16065.5461
+  duration_ms: 1780.7555
   type: 'test'
   ...
 # Subtest: refuses overwrite without force
 ok 32 - refuses overwrite without force
   ---
-  duration_ms: 13608.9623
+  duration_ms: 1211.6191
   type: 'test'
   ...
 # Subtest: force overwrites project-local pack
 ok 33 - force overwrites project-local pack
   ---
-  duration_ms: 7394.0765
+  duration_ms: 1869.7675
   type: 'test'
   ...
 # Subtest: refuses symlink target
 ok 34 - refuses symlink target
   ---
-  duration_ms: 31.598
+  duration_ms: 11.5442
   type: 'test'
   ...
 # Subtest: CLI help displays mission
 ok 35 - CLI help displays mission
   ---
-  duration_ms: 1239.9736
+  duration_ms: 859.9124
   type: 'test'
   ...
 # Subtest: CLI doctor runs without keys
 ok 36 - CLI doctor runs without keys
   ---
-  duration_ms: 1307.5726
+  duration_ms: 825.6758
   type: 'test'
   ...
 # Subtest: CLI unknown command exits nonzero
 ok 37 - CLI unknown command exits nonzero
   ---
-  duration_ms: 1918.6418
+  duration_ms: 991.9049
   type: 'test'
   ...
 # Subtest: initializes empty registry
 ok 38 - initializes empty registry
   ---
-  duration_ms: 50.8802
+  duration_ms: 73.1399
   type: 'test'
   ...
 # Subtest: double init rejected
 ok 39 - double init rejected
   ---
-  duration_ms: 41.3217
+  duration_ms: 51.1637
   type: 'test'
   ...
 # Subtest: load before init rejected
 ok 40 - load before init rejected
   ---
-  duration_ms: 7.3669
+  duration_ms: 8.2734
   type: 'test'
   ...
 # Subtest: imports JSON and stable ID
 ok 41 - imports JSON and stable ID
   ---
-  duration_ms: 88.7019
+  duration_ms: 73.7408
   type: 'test'
   ...
 # Subtest: idempotent import skips same
 ok 42 - idempotent import skips same
   ---
-  duration_ms: 73.5176
+  duration_ms: 74.9891
   type: 'test'
   ...
 # Subtest: review exposes acceptance
 ok 43 - review exposes acceptance
   ---
-  duration_ms: 66.3931
+  duration_ms: 57.9423
   type: 'test'
   ...
 # Subtest: review does not approve
 ok 44 - review does not approve
   ---
-  duration_ms: 76.8211
+  duration_ms: 57.5931
   type: 'test'
   ...
 # Subtest: missing ID rejected
 ok 45 - missing ID rejected
   ---
-  duration_ms: 63.3802
+  duration_ms: 68.1027
   type: 'test'
   ...
 # Subtest: duplicate import ID rejected
 ok 46 - duplicate import ID rejected
   ---
-  duration_ms: 67.9708
+  duration_ms: 44.6067
   type: 'test'
   ...
 # Subtest: same ID changed content rejected on ingest
 ok 47 - same ID changed content rejected on ingest
   ---
-  duration_ms: 126.599
+  duration_ms: 94.1123
   type: 'test'
   ...
 # Subtest: unknown input extension rejected
 ok 48 - unknown input extension rejected
   ---
-  duration_ms: 105.2824
+  duration_ms: 85.4394
   type: 'test'
   ...
 # Subtest: missing reviewer confirmation rejects approval
 ok 49 - missing reviewer confirmation rejects approval
   ---
-  duration_ms: 93.6096
+  duration_ms: 69.2004
   type: 'test'
   ...
 # Subtest: revision mismatch rejects approval
 ok 50 - revision mismatch rejects approval
   ---
-  duration_ms: 81.9072
+  duration_ms: 92.4283
   type: 'test'
   ...
 # Subtest: explicit approval is self attested
 ok 51 - explicit approval is self attested
   ---
-  duration_ms: 149.8506
+  duration_ms: 105.4827
   type: 'test'
   ...
 # Subtest: ticket alone never passes
 ok 52 - ticket alone never passes
   ---
-  duration_ms: 200.6108
+  duration_ms: 128.5843
   type: 'test'
   ...
 # Subtest: code alone never passes
 ok 53 - code alone never passes
   ---
-  duration_ms: 126.6373
+  duration_ms: 154.3964
   type: 'test'
   ...
 # Subtest: test file existence not test pass
 ok 54 - test file existence not test pass
   ---
-  duration_ms: 694.2315
+  duration_ms: 158.4597
   type: 'test'
   ...
 # Subtest: imported failed test not pass
 ok 55 - imported failed test not pass
   ---
-  duration_ms: 470.8251
+  duration_ms: 196.2527
   type: 'test'
   ...
 # Subtest: imported passed test marked unverified provenance
 ok 56 - imported passed test marked unverified provenance
   ---
-  duration_ms: 682.8106
+  duration_ms: 104.8867
   type: 'test'
   ...
 # Subtest: invalid test outcome rejected
 ok 57 - invalid test outcome rejected
   ---
-  duration_ms: 1016.7452
+  duration_ms: 92.119
   type: 'test'
   ...
 # Subtest: release claim alone not complete
 ok 58 - release claim alone not complete
   ---
-  duration_ms: 1366.4201
+  duration_ms: 149.7965
   type: 'test'
   ...
 # Subtest: human attestation needs complete evidence set
 ok 59 - human attestation needs complete evidence set
   ---
-  duration_ms: 890.6571
+  duration_ms: 132.618
   type: 'test'
   ...
 # Subtest: human attestation is labeled not independently verified
 ok 60 - human attestation is labeled not independently verified
   ---
-  duration_ms: 2160.0708
+  duration_ms: 357.2039
   type: 'test'
   ...
 # Subtest: revision increments and invalidates old approval
 ok 61 - revision increments and invalidates old approval
   ---
-  duration_ms: 2642.1515
+  duration_ms: 193.0618
   type: 'test'
   ...
 # Subtest: revision retains old links as stale
 ok 62 - revision retains old links as stale
   ---
-  duration_ms: 1790.3637
+  duration_ms: 156.1612
   type: 'test'
   ...
 # Subtest: same content revision is no-op
 ok 63 - same content revision is no-op
   ---
-  duration_ms: 1927.3956
+  duration_ms: 112.5771
   type: 'test'
   ...
 # Subtest: old revision evidence rejected
 ok 64 - old revision evidence rejected
   ---
-  duration_ms: 2252.9188
+  duration_ms: 184.6936
   type: 'test'
   ...
 # Subtest: audit chain validates
 ok 65 - audit chain validates
   ---
-  duration_ms: 2137.9147
+  duration_ms: 167.5148
   type: 'test'
   ...
 # Subtest: audit tampering detected
 ok 66 - audit tampering detected
   ---
-  duration_ms: 1495.4202
+  duration_ms: 113.0056
   type: 'test'
   ...
 # Subtest: audit tampering blocks further writes
 ok 67 - audit tampering blocks further writes
   ---
-  duration_ms: 718.7076
+  duration_ms: 90.9219
   type: 'test'
   ...
 # Subtest: unknown requirement impact is null
 ok 68 - unknown requirement impact is null
   ---
-  duration_ms: 575.1084
+  duration_ms: 77.1198
   type: 'test'
   ...
 # Subtest: report summary counts unanswered
 ok 69 - report summary counts unanswered
   ---
-  duration_ms: 1564.28
+  duration_ms: 86.8605
   type: 'test'
   ...
 # Subtest: changed code file invalidates current code evidence
 ok 70 - changed code file invalidates current code evidence
   ---
-  duration_ms: 2448.5189
+  duration_ms: 178.1013
   type: 'test'
   ...
 # Subtest: missing test result invalidates imported pass evidence
 ok 71 - missing test result invalidates imported pass evidence
   ---
-  duration_ms: 1978.5615
+  duration_ms: 145.0435
   type: 'test'
   ...
 # Subtest: attestation rejects modified code evidence
 ok 72 - attestation rejects modified code evidence
   ---
-  duration_ms: 1982.6055
+  duration_ms: 208.6721
   type: 'test'
   ...
 # Subtest: normalizes title whitespace
 ok 73 - normalizes title whitespace
   ---
-  duration_ms: 6.6598
+  duration_ms: 4.55
   type: 'test'
   ...
 # Subtest: rejects blank title
 ok 74 - rejects blank title
   ---
-  duration_ms: 1.1761
+  duration_ms: 0.8365
   type: 'test'
   ...
 # Subtest: rejects long title
 ok 75 - rejects long title
   ---
-  duration_ms: 0.7244
+  duration_ms: 0.349
   type: 'test'
   ...
 # Subtest: rejects array requirement
 ok 76 - rejects array requirement
   ---
-  duration_ms: 0.5569
+  duration_ms: 0.2789
   type: 'test'
   ...
 # Subtest: rejects oversized behavior
 ok 77 - rejects oversized behavior
   ---
-  duration_ms: 0.6013
+  duration_ms: 0.3479
   type: 'test'
   ...
 # Subtest: filters invalid constraint items
 ok 78 - filters invalid constraint items
   ---
-  duration_ms: 1.8877
+  duration_ms: 1.3641
   type: 'test'
   ...
 # Subtest: parses heading
 ok 79 - parses heading
   ---
-  duration_ms: 2.2841
+  duration_ms: 0.7012
   type: 'test'
   ...
 # Subtest: parses actor section
 ok 80 - parses actor section
   ---
-  duration_ms: 0.6879
+  duration_ms: 0.2685
   type: 'test'
   ...
 # Subtest: parses constraints bullets
 ok 81 - parses constraints bullets
   ---
-  duration_ms: 0.7279
+  duration_ms: 0.2634
   type: 'test'
   ...
 # Subtest: rough story surfaces missing actor
 ok 82 - rough story surfaces missing actor
   ---
-  duration_ms: 1.74
+  duration_ms: 0.8381
   type: 'test'
   ...
 # Subtest: rough story surfaces permission question
 ok 83 - rough story surfaces permission question
   ---
-  duration_ms: 1.0096
+  duration_ms: 0.427
   type: 'test'
   ...
 # Subtest: rough story surfaces invitation delivery question
 ok 84 - rough story surfaces invitation delivery question
   ---
-  duration_ms: 0.3972
+  duration_ms: 0.2093
   type: 'test'
   ...
 # Subtest: fully populated still raises domain questions
 ok 85 - fully populated still raises domain questions
   ---
-  duration_ms: 0.4253
+  duration_ms: 0.2979
   type: 'test'
   ...
 # Subtest: candidate acceptance count five
 ok 86 - candidate acceptance count five
   ---
-  duration_ms: 0.4197
+  duration_ms: 0.2324
   type: 'test'
   ...
 # Subtest: candidate criteria contain placeholders
 ok 87 - candidate criteria contain placeholders
   ---
-  duration_ms: 0.4771
+  duration_ms: 0.2549
   type: 'test'
   ...
 # Subtest: supplied acceptance remains unapproved
 ok 88 - supplied acceptance remains unapproved
   ---
-  duration_ms: 0.2583
+  duration_ms: 0.1278
   type: 'test'
   ...
 # Subtest: stable generated requirement id
 ok 89 - stable generated requirement id
   ---
-  duration_ms: 1.9142
+  duration_ms: 1.1617
   type: 'test'
   ...
 # Subtest: explicit ID is retained
 ok 90 - explicit ID is retained
   ---
-  duration_ms: 0.4162
+  duration_ms: 0.1847
   type: 'test'
   ...
 # Subtest: bad ID rejected
 ok 91 - bad ID rejected
   ---
-  duration_ms: 0.3415
+  duration_ms: 0.1601
   type: 'test'
   ...
 # Subtest: registry duplicate rejected
 ok 92 - registry duplicate rejected
   ---
-  duration_ms: 0.541
+  duration_ms: 0.2758
   type: 'test'
   ...
 # Subtest: registry wrong version rejected
 ok 93 - registry wrong version rejected
   ---
-  duration_ms: 0.2953
+  duration_ms: 0.107
   type: 'test'
   ...
 # Subtest: canonical hashing order invariant
 ok 94 - canonical hashing order invariant
   ---
-  duration_ms: 0.2307
+  duration_ms: 0.0963
   type: 'test'
   ...
 # Subtest: hash is 64 hex
 ok 95 - hash is 64 hex
   ---
-  duration_ms: 0.2671
+  duration_ms: 0.1182
   type: 'test'
   ...
 # Subtest: redacts tokens
 ok 96 - redacts tokens
   ---
-  duration_ms: 0.1597
+  duration_ms: 0.0531
   type: 'test'
   ...
 # Subtest: escapes HTML
 ok 97 - escapes HTML
   ---
-  duration_ms: 0.3701
+  duration_ms: 0.1717
   type: 'test'
   ...
 # Subtest: refuses path traversal
 ok 98 - refuses path traversal
   ---
-  duration_ms: 22.6708
+  duration_ms: 9.6014
   type: 'test'
   ...
 # Subtest: refuses symlinked input
 ok 99 - refuses symlinked input # SKIP symlinks not permitted on this host
   ---
-  duration_ms: 50.5664
+  duration_ms: 33.8045
   type: 'test'
   ...
 # Subtest: refuses symlinked evidence
 ok 100 - refuses symlinked evidence # SKIP symlinks not permitted on this host
   ---
-  duration_ms: 454.8901
+  duration_ms: 98.5813
   type: 'test'
   ...
 # Subtest: refuses oversized input
 ok 101 - refuses oversized input
   ---
-  duration_ms: 41.7998
+  duration_ms: 17.1068
   type: 'test'
   ...
 # Subtest: refuses symlinked state directory
 ok 102 - refuses symlinked state directory
   ---
-  duration_ms: 9.7016
+  duration_ms: 10.8817
   type: 'test'
   ...
 # Subtest: report HTML escapes malicious title
 ok 103 - report HTML escapes malicious title
   ---
-  duration_ms: 227.6684
+  duration_ms: 83.4513
   type: 'test'
   ...
 # Subtest: markdown escapes pipe in title
 ok 104 - markdown escapes pipe in title
   ---
-  duration_ms: 131.1471
+  duration_ms: 92.2966
   type: 'test'
   ...
 # Subtest: report output outside workspace rejected
 ok 105 - report output outside workspace rejected
   ---
-  duration_ms: 165.281
+  duration_ms: 97.0043
   type: 'test'
   ...
 # Subtest: report creates seven files
 ok 106 - report creates seven files
   ---
-  duration_ms: 285.224
+  duration_ms: 254.4892
   type: 'test'
   ...
 # Subtest: report JSON valid
 ok 107 - report JSON valid
   ---
-  duration_ms: 792.2146
+  duration_ms: 304.337
   type: 'test'
   ...
 # Subtest: report no conformance claim
 ok 108 - report no conformance claim
   ---
-  duration_ms: 215.8601
+  duration_ms: 110.5509
   type: 'test'
   ...
 # Subtest: rejects unsupported input file extension
 ok 109 - rejects unsupported input file extension
   ---
-  duration_ms: 704.8277
+  duration_ms: 144.4757
   type: 'test'
   ...
 # Subtest: report refuses symlinked parent directory
 ok 110 - report refuses symlinked parent directory
   ---
-  duration_ms: 573.4057
+  duration_ms: 129.9142
   type: 'test'
   ...
 # Subtest: acceptance export explicitly unapproved
 ok 111 - acceptance export explicitly unapproved
   ---
-  duration_ms: 3622.0953
+  duration_ms: 314.6118
   type: 'test'
   ...
 # Subtest: open question export preserves requirement ID
 ok 112 - open question export preserves requirement ID
   ---
-  duration_ms: 2557.6382
+  duration_ms: 227.3944
   type: 'test'
   ...
 # Subtest: server rejects short bearer token
 ok 113 - server rejects short bearer token
   ---
-  duration_ms: 113.8221
+  duration_ms: 161.2611
   type: 'test'
   ...
 # Subtest: server rejects unauthorized
 ok 114 - server rejects unauthorized
   ---
-  duration_ms: 298.4825
+  duration_ms: 181.3975
   type: 'test'
   ...
 # Subtest: server health is read-only
 ok 115 - server health is read-only
   ---
-  duration_ms: 180.9439
+  duration_ms: 92.9217
   type: 'test'
   ...
 # Subtest: server trace returns requirement
 ok 116 - server trace returns requirement
   ---
-  duration_ms: 228.9395
+  duration_ms: 99.0327
   type: 'test'
   ...
 # Subtest: server requirements endpoint returns array
 ok 117 - server requirements endpoint returns array
   ---
-  duration_ms: 386.3674
+  duration_ms: 102.8229
   type: 'test'
   ...
 # Subtest: server forbids POST
 ok 118 - server forbids POST
   ---
-  duration_ms: 259.5253
+  duration_ms: 90.3039
   type: 'test'
   ...
 # Subtest: server hides unknown endpoints
 ok 119 - server hides unknown endpoints
   ---
-  duration_ms: 405.4087
+  duration_ms: 99.6187
   type: 'test'
   ...
 # Subtest: server no CORS
 ok 120 - server no CORS
   ---
-  duration_ms: 232.0141
+  duration_ms: 81.7191
   type: 'test'
   ...
 # Subtest: server sends no-store
 ok 121 - server sends no-store
   ---
-  duration_ms: 167.3034
+  duration_ms: 68.7604
   type: 'test'
   ...
 # Subtest: server HTML report is escaped
 ok 122 - server HTML report is escaped
   ---
-  duration_ms: 212.3228
+  duration_ms: 86.6104
   type: 'test'
   ...
 1..122
 # tests 122
 # suites 0
-# pass 119
-# fail 1
+# pass 120
+# fail 0
 # cancelled 0
 # skipped 2
 # todo 0
-# duration_ms 52425.2511
+# duration_ms 15216.9385
