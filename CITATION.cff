@@ -6,8 +6,8 @@ type: software
 authors:
   - family-names: Shah
     given-names: Vatsal
-version: 0.2.1
-date-released: 2026-11-22
+version: 0.2.2
+date-released: 2026-11-25
 license: Apache-2.0
 url: "https://shahvatsalofficial.github.io/intentsutra-ai/"
 repository-code: "https://github.com/shahvatsalofficial/intentsutra-ai"

@@ -1,6 +1,10 @@
 # User Guide
 
+> A complete walk-through from import to a sealed audit report, using the bundled synthetic fixtures.
+
 A complete walk-through using the bundled synthetic fixtures. Every command below was run for real; transcripts are in `samples/`.
+
+{{flow:quickstart}}
 
 ## 1. Check the host
 ```bash
@@ -66,6 +70,8 @@ Open `audit-out/audit-report.html` in any browser. It is a single responsive fil
 | `FAIL` | a critical or high check failed: broken chain, edited registry, drifted evidence, upgraded label |
 
 Use `--strict` in CI to turn FAIL into exit code 2.
+
+{{svg:ci}}
 
 ## 10. Use with an AI coding assistant
 ```bash

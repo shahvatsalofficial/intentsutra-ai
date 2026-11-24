@@ -1,5 +1,7 @@
 # Glossary
 
+> Every term used in the product, defined once.
+
 | Term | Meaning |
 |---|---|
 | Requirement | A structured statement with stable ID, revision, title, actor, trigger, behavior, constraints and acceptance examples |

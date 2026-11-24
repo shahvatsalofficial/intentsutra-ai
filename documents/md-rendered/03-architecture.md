@@ -1,5 +1,7 @@
 # Architecture
 
+> Principles, layers, components, data flow, decisions and known limits.
+
 ## Principles
 1. **Proof over pointers.** A ticket, PR, file or imported claim is a pointer, not proof.
 2. **Revision-bound.** Evidence and approvals attach to an exact requirement revision.
@@ -8,7 +10,7 @@
 5. **Tamper evidence, honestly labelled.** SHA-256 chains and seals detect edits; they are not signatures.
 
 ## Layers
-| Layer | Implementation in 0.2.1 | Status |
+| Layer | Implementation in 0.2.2 | Status |
 |---|---|---|
 | Business | Roles: product owner approves, engineer links, auditor verifies | implemented as process contract |
 | Capability | intake, elicitation, versioning, acceptance, approval, evidence graph, impact, reports, audit | implemented |
@@ -35,6 +37,8 @@
 
 Dependency direction is strictly `cli/server → core`; core modules never import the CLI.
 
+{{svg:arch}}
+
 ## Data flow
 ```text
 brief.md / requirements.json
@@ -46,6 +50,8 @@ brief.md / requirements.json
    → revise → rev 2: approvals and links become stale history
    → trace / report / audit (re-derive; write JSON, MD, HTML)
 ```
+
+{{svg:trust}}
 
 ## Key decisions
 | ADR | Decision | Reason |

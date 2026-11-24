@@ -1,7 +1,11 @@
 # Security and Privacy
 
+> Threat model, controls with the tests that prove them, fuzzing results and honest limits.
+
 ## Data handling
 Everything stays on your machine. There are no network calls, no telemetry and no API keys. The tool reads only files you point it at, inside the workspace, and writes only `.intentsutra/` and report folders you choose.
+
+{{svg:trust}}
 
 ## Threat model
 | Threat | Control in {{VERSION}} | Test |

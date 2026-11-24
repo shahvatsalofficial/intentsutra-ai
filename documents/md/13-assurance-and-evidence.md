@@ -1,5 +1,7 @@
 # Assurance and Evidence
 
+> How a skeptical reader can check IntentSutra instead of trusting it.
+
 This page tells a skeptical reader how to check IntentSutra instead of trusting it. It is written from the standpoint of an independent auditor.
 
 ## What was independently produced
@@ -14,6 +16,10 @@ This page tells a skeptical reader how to check IntentSutra instead of trusting 
 
 The forged sample is the important one: an audit that never fails proves nothing. Here the audit demonstrably fails when state is edited without a matching audit event.
 
+{{chart:verdicts}}
+
+{{svg:audit}}
+
 ## Verify it yourself in five minutes
 ```bash
 git clone https://github.com/shahvatsalofficial/intentsutra-ai && cd intentsutra-ai
@@ -22,6 +28,8 @@ npm run proof               # regenerates every proof file from scratch
 node packages/cli/index.mjs verify --report docs/proof/audit-sample/audit-report.json
 ```
 Then open `docs/proof/audit-sample-forged/audit-report.html` and read finding AUD-08.
+
+{{chart:fuzz}}
 
 ## What a reviewer should challenge
 1. **Does the audit trust the registry?** No. It recomputes content hashes, evidence hashes and the attested state from raw data, then cross-checks counts against the audit log.

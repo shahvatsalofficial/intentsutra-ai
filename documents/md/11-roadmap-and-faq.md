@@ -1,5 +1,7 @@
 # Roadmap and FAQ
 
+> Milestones with honest status, and answers to the questions people ask first.
+
 ## Milestones and honest status
 | Milestone | Scope | Status |
 |---|---|---|

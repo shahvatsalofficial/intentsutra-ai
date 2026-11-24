@@ -1,6 +1,8 @@
 # Executive Summary
 
-**IntentSutra AI** is a local-first, open-source command-line workbench that turns a rough feature request into versioned, reviewable requirements and then keeps an honest record of the evidence behind each one. Its single organizing rule: **it must be harder, not easier, to claim a requirement is complete without real, reviewable proof.** Version 0.2.1, Apache-2.0, created by Vatsal Shah.
+> What IntentSutra AI is, the problem it solves, what it deliberately does not do, and the evidence that it works.
+
+**IntentSutra AI** is a local-first, open-source command-line workbench that turns a rough feature request into versioned, reviewable requirements and then keeps an honest record of the evidence behind each one. Its single organizing rule: **it must be harder, not easier, to claim a requirement is complete without real, reviewable proof.** Version 0.2.2, Apache-2.0, created by Vatsal Shah.
 
 ## The problem
 Teams routinely treat a closed ticket, a merged pull request, a test file or a green status field as proof that a requirement is done. None of these is proof. Approvals get attached to text that later changed. Evidence goes stale silently. Auditors then cannot tell what was actually reviewed, by whom, against which version.
@@ -16,6 +18,8 @@ Teams routinely treat a closed ticket, a merged pull request, a test file or a g
 | Detect drift | Re-hashes linked files; a changed file is reported as `hash-mismatch` |
 | Prove it independently | `intentsutra audit` re-derives every claim and writes a sealed report as **JSON, Markdown and HTML** |
 
+{{svg:pipeline}}
+
 ## What it deliberately does not do
 - It never marks a requirement "completed". The strongest state is `human-attested-evidence-linked`.
 - It does not execute tests. Imported test-run and release outcomes are labelled **user-imported, not independently verified**.
@@ -23,16 +27,20 @@ Teams routinely treat a closed ticket, a merged pull request, a test file or a g
 - It gives no legal advice and certifies nothing.
 
 ## Evidence this release works
-Recorded 2026-11-22T18:43:05.809Z on Node v24.15.0 (win32/x64):
+Recorded 2026-11-24T18:42:25.993Z on Node v24.15.0 (win32/x64):
 
 | Check | Result |
 |---|---|
-| Automated tests | 118 total, **116 passed**, 0 failed, 2 skipped |
+| Automated tests | 122 total, **119 passed**, 1 failed, 2 skipped |
 | Independent audit of the demo workspace | 11 of 11 checks passed; verdict `PASS` |
 | Same workspace after a silent registry edit | verdict `FAIL` (forgery detected) |
 | Fuzzing, fixed seed | 5398 generated inputs, 0 unexpected exceptions or undetected tampering |
 
 Raw logs, transcripts and sealed sample reports are linked from the [test report](08-test-report) and the [assurance page](13-assurance-and-evidence).
+
+{{chart:verdicts}}
+
+{{chart:tests}}
 
 ## Who benefits
 Product owners and business analysts (clear unknowns and approvals), engineering leads (version-bound traceability), QA engineers (test file is not a test pass), release managers (stale evidence cannot be promoted) and internal auditors (a hash-chained log and a reproducible audit report).

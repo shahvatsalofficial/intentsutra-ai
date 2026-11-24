@@ -1,11 +1,13 @@
 # Assurance and Evidence
 
+> How a skeptical reader can check IntentSutra instead of trusting it.
+
 This page tells a skeptical reader how to check IntentSutra instead of trusting it. It is written from the standpoint of an independent auditor.
 
 ## What was independently produced
 | Artifact | Where | What it shows |
 |---|---|---|
-| Raw TAP log | [test-results/test-run.tap](test-results/test-run.tap) | every test name and result: 116 passed, 0 failed, 2 skipped |
+| Raw TAP log | [test-results/test-run.tap](test-results/test-run.tap) | every test name and result: 119 passed, 1 failed, 2 skipped |
 | Fuzz results | [test-results/fuzz-results.json](test-results/fuzz-results.json) | 5398 generated inputs; 398 audit-log edits all detected |
 | CLI transcripts | `samples/cli-*.txt` | a real lifecycle, including refused actions and exit codes |
 | Sample audit, honest | [samples/audit/audit-report.html](samples/audit/audit-report.html) | verdict `PASS`, 11 checks |
@@ -13,6 +15,10 @@ This page tells a skeptical reader how to check IntentSutra instead of trusting 
 | Digests | [test-results/SHA256SUMS.txt](test-results/SHA256SUMS.txt) | SHA-256 of each proof file |
 
 The forged sample is the important one: an audit that never fails proves nothing. Here the audit demonstrably fails when state is edited without a matching audit event.
+
+{{chart:verdicts}}
+
+{{svg:audit}}
 
 ## Verify it yourself in five minutes
 ```bash
@@ -22,6 +28,8 @@ npm run proof               # regenerates every proof file from scratch
 node packages/cli/index.mjs verify --report docs/proof/audit-sample/audit-report.json
 ```
 Then open `docs/proof/audit-sample-forged/audit-report.html` and read finding AUD-08.
+
+{{chart:fuzz}}
 
 ## What a reviewer should challenge
 1. **Does the audit trust the registry?** No. It recomputes content hashes, evidence hashes and the attested state from raw data, then cross-checks counts against the audit log.

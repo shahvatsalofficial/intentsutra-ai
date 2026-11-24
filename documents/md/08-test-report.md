@@ -1,5 +1,7 @@
 # Test Report
 
+> Recorded test, audit and fuzz results with the exact machine, plus defects found and fixed.
+
 Recorded by `npm run proof` on **{{RECORDED}}**, Node **{{NODE}}**, **{{PLATFORM}}**, IntentSutra **{{VERSION}}**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
 
 ## Summary
@@ -12,12 +14,16 @@ Recorded by `npm run proof` on **{{RECORDED}}**, Node **{{NODE}}**, **{{PLATFORM
 
 The {{SKIPPED}} skipped tests create **file** symlinks, which Windows forbids without Developer Mode. They are reported as skipped, not passed. Directory-link tests use junctions and ran.
 
+{{chart:tests}}
+
 ## Coverage
 - **Functional:** import, stable IDs, duplicate import, revision, approval, links, attestation, impact, reports.
 - **Proof policy:** approval is never inferred; a ticket or PR is not completion; a test file is not a test pass; a failed imported run is not a pass; a revision invalidates approvals and evidence; linking an old revision is rejected.
 - **Security:** traversal, symlink, oversize, HTML and Markdown escaping, tampered audit log, API without token, POST rejected, no CORS, IDE overwrite refused.
 - **Audit:** every AUD check has a pass case and a failing case (forged approval, forged identity flag, upgraded label, tampered chain, drifted evidence, edited content, seal tamper).
 - **CLI:** exit codes, `--version`, boolean flags before other flags, `--strict`, `verify`.
+
+{{chart:fuzz}}
 
 ## Fuzzing
 Deterministic seed `20261122`. {{REQCASES}} mutated requirement records, 1500 Markdown inputs, {{IMPORTS}} hostile import files (null, arrays of junk, invalid JSON, empty, wrong shapes), {{TAMPER}} single-character edits of the audit log (all detected) and {{RENDER}} renders of injection titles through both HTML and Markdown. Only the intended `IntentError` is accepted as a failure mode. See [fuzz-results.json](test-results/fuzz-results.json).

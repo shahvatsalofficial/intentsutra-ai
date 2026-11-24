@@ -1,5 +1,7 @@
 # Executive Summary
 
+> What IntentSutra AI is, the problem it solves, what it deliberately does not do, and the evidence that it works.
+
 **IntentSutra AI** is a local-first, open-source command-line workbench that turns a rough feature request into versioned, reviewable requirements and then keeps an honest record of the evidence behind each one. Its single organizing rule: **it must be harder, not easier, to claim a requirement is complete without real, reviewable proof.** Version {{VERSION}}, Apache-2.0, created by Vatsal Shah.
 
 ## The problem
@@ -15,6 +17,8 @@ Teams routinely treat a closed ticket, a merged pull request, a test file or a g
 | Bind evidence to versions | Every link carries the requirement revision; a new revision makes old approvals and links **stale**, preserved as history |
 | Detect drift | Re-hashes linked files; a changed file is reported as `hash-mismatch` |
 | Prove it independently | `intentsutra audit` re-derives every claim and writes a sealed report as **JSON, Markdown and HTML** |
+
+{{svg:pipeline}}
 
 ## What it deliberately does not do
 - It never marks a requirement "completed". The strongest state is `human-attested-evidence-linked`.
@@ -33,6 +37,10 @@ Recorded {{RECORDED}} on Node {{NODE}} ({{PLATFORM}}):
 | Fuzzing, fixed seed | {{FUZZ}} generated inputs, {{FUZZ_FAIL}} unexpected exceptions or undetected tampering |
 
 Raw logs, transcripts and sealed sample reports are linked from the [test report](08-test-report) and the [assurance page](13-assurance-and-evidence).
+
+{{chart:verdicts}}
+
+{{chart:tests}}
 
 ## Who benefits
 Product owners and business analysts (clear unknowns and approvals), engineering leads (version-bound traceability), QA engineers (test file is not a test pass), release managers (stale evidence cannot be promoted) and internal auditors (a hash-chained log and a reproducible audit report).

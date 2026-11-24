@@ -1,10 +1,14 @@
 # Security and Privacy
 
+> Threat model, controls with the tests that prove them, fuzzing results and honest limits.
+
 ## Data handling
 Everything stays on your machine. There are no network calls, no telemetry and no API keys. The tool reads only files you point it at, inside the workspace, and writes only `.intentsutra/` and report folders you choose.
 
+{{svg:trust}}
+
 ## Threat model
-| Threat | Control in 0.2.1 | Test |
+| Threat | Control in 0.2.2 | Test |
 |---|---|---|
 | Prompt injection in requirement or issue text | text is data; no LLM in the CLI; source labelled `untrusted-input` | requirements tests |
 | Path traversal | `inside()` resolves against the real workspace root and rejects escapes | `refuses path traversal` |

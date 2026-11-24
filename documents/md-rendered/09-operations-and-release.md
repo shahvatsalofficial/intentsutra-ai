@@ -1,5 +1,7 @@
 # Operations and Release
 
+> Backups, failure modes, the release process, CI and supply chain.
+
 ## Runtime
 A short-lived CLI. There is no daemon, except the optional `serve` command, which you start and stop yourself.
 
@@ -24,6 +26,8 @@ Exit codes, JSON on stdout, errors on stderr as `CODE: message`. The audit log i
 4. Tag `vX.Y.Z`; the Release workflow checks the tag matches the version and publishes to npm with provenance (trusted publishing).
 5. First publish of a new package must be done once by hand (`npm publish --access public`); then link the repository and `release.yml` as the trusted publisher on npmjs.com.
 6. Create the GitHub release with notes that state limits.
+
+{{svg:ci}}
 
 ## CI
 `ci.yml`: tests on Ubuntu, Windows and macOS (Node 22/24), doctor, demo, strict audit with seal verification and report upload, `npm pack` clean-install smoke test, secret scan. `pages.yml`: publishes `documents/html/`. `release.yml`: tag-driven npm publish. Third-party Actions are pinned by major version and refreshed by Dependabot.

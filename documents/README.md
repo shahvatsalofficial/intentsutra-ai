@@ -1,10 +1,10 @@
 # IntentSutra AI — documents
 
-Complete documentation set for **IntentSutra AI 0.2.1** (executive, functional, architecture, technical, user guide, security, evidence and rules, test report, operations, legal, roadmap and FAQ, glossary, assurance).
+Documentation website and Markdown set for **IntentSutra AI 0.2.2**.
 
-- Start: `html/index.html` (open in a browser; self-contained, responsive, light/dark, printable)
-- Markdown sources: `md/` (with placeholders) and `md-rendered/` (numbers filled from the recorded run)
-- Proof: `test-results/` (TAP log, fuzz, environment) · Samples: `samples/` (real audit report in MD/HTML/JSON, CLI transcripts)
-- Rebuild: `node build.mjs` after `npm run proof` and `npm run audit` in `../../IntentSutra-AI`
+- Website source: `md/` (Markdown) built by `build.mjs` into `html/` (light default, dark toggle, responsive)
+- Rendered Markdown with real numbers: `md-rendered/`
+- Proof copied beside the pages: `html/test-results/`, `html/samples/`
+- Rebuild: `npm run proof && npm run docs:build`
 
-Project: https://github.com/shahvatsalofficial/intentsutra-ai
+Live: https://shahvatsalofficial.github.io/intentsutra-ai/ · Repository: https://github.com/shahvatsalofficial/intentsutra-ai

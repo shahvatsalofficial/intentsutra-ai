@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 — 2026-11-25
+- Documentation website redesigned: light by default with a dark toggle, responsive landing page, sidebar and on-page navigation, search, 8 theme-aware diagrams, charts generated from the proof pack, and a new Real-World Scenarios page with seven flowcharts.
+- Docs build test: every page is light by default, every internal link and anchor resolves, diagrams and charts render.
+
 ## 0.2.1 — 2026-11-23
 - Release workflow publishes to npm via trusted publishing (OIDC) from a version tag, including the first publish.
 - Regenerated proof and documents.

@@ -1,7 +1,9 @@
 # Functional Specification
 
+> Scope, personas, numbered functional requirements, traceability states and exit codes.
+
 ## Scope
-In scope for 0.2.1: local Markdown/JSON import, schema validation, deterministic question prompts, reviewable acceptance scenarios, explicit self-attested approval, revision history, evidence links with SHA-256, change impact, traceability reports, independent audit report, audit chain, authenticated loopback read-only API, project-local IDE instruction packs.
+In scope for 0.2.2: local Markdown/JSON import, schema validation, deterministic question prompts, reviewable acceptance scenarios, explicit self-attested approval, revision history, evidence links with SHA-256, change impact, traceability reports, independent audit report, audit chain, authenticated loopback read-only API, project-local IDE instruction packs.
 
 Out of scope (planned): natural-language semantic extraction, rich Markdown grammar, executing tests, authenticated stakeholder review, ticketing sync, dashboard, enterprise SSO/RBAC.
 
@@ -40,6 +42,8 @@ Out of scope (planned): natural-language semantic extraction, rich Markdown gram
 | `partial-evidence` | Approved; some current evidence |
 | `human-review-required` | Approved with code, imported passed test-run and imported release claim; waiting for attestation |
 | `human-attested-evidence-linked` | A human attested to the evidence. **Not "completed".** |
+
+{{svg:lifecycle}}
 
 ## Exit codes
 `0` success · `1` error or refused action · `2` audit verdict FAIL when `--strict` is set.

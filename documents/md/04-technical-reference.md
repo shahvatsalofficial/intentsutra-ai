@@ -1,5 +1,7 @@
 # Technical Reference
 
+> Install, every command and flag, data files, the audit report schema, the loopback API and error codes.
+
 ## Requirements
 Node.js 22 or newer. No runtime dependencies. Works on Windows, macOS and Linux (see [test report](08-test-report) for what was actually run).
 

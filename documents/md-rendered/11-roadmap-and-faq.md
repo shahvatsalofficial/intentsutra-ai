@@ -1,10 +1,12 @@
 # Roadmap and FAQ
 
+> Milestones with honest status, and answers to the questions people ask first.
+
 ## Milestones and honest status
 | Milestone | Scope | Status |
 |---|---|---|
 | M0 | offline registry, questions, acceptance drafts, revisions, evidence, reports, loopback API | **implemented**, tested on Windows/Node 24 (see [test report](08-test-report)) |
-| M0.2 | independent audit with sealed JSON/Markdown/HTML reports, `verify`, CI smoke test, proof pack | **implemented** in 0.2.1 |
+| M0.2 | independent audit with sealed JSON/Markdown/HTML reports, `verify`, CI smoke test, proof pack | **implemented** in 0.2.2 |
 | M1 | opt-in isolated runner that captures command, commit SHA, environment, exit code, logs and hashes; richer importer | planned |
 | M2 | authenticated review (OIDC), tamper-resistant approvals | planned |
 | M3 | Git/CI change graph and stale-impact analysis | planned |

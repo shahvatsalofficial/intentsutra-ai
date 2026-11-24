@@ -1,5 +1,7 @@
 # Rules and Evidence Model
 
+> The ten rules split into enforced, guidance and not implemented; evidence kinds, trust labels and the eleven audit checks.
+
 ## Ten rules
 Each rule is a policy. The table separates what **code enforces**, what is **guidance**, and what is **not implemented**, so no rule is overstated.
 
@@ -29,8 +31,12 @@ Each rule is a policy. The table separates what **code enforces**, what is **gui
 ## Trust labels
 Future schemas separate `observed-file`, `imported-claim`, `self-attested`, `measured-test`, `verified-external-signature`, `unknown`, `not-run` and `stale`. This release implements the first three plus stale; `measured-test` and `verified-external-signature` are **planned** and are never shown because the code cannot substantiate them.
 
+{{svg:stale}}
+
 ## Stale evidence
 When a revision changes canonical content (`title, actor, trigger, behavior, constraints, acceptance`), older approvals, links and attestations remain in the record for that older revision and no longer count. Reports show the stale count. Nothing is migrated silently.
+
+{{svg:lifecycle}}
 
 ## The attestation gate
 `attest` succeeds only when, for the current revision, there is: an approval, an observed `code` link with matching hash, an imported `passed` test-run, and an imported `released` release claim. The reviewer then confirms by hand. The state name `human-attested-evidence-linked` deliberately avoids "complete".

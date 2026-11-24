@@ -1,16 +1,20 @@
 # Test Report
 
-Recorded by `npm run proof` on **2026-11-22T18:43:05.809Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.1**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
+> Recorded test, audit and fuzz results with the exact machine, plus defects found and fixed.
+
+Recorded by `npm run proof` on **2026-11-24T18:42:25.993Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.2**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
 
 ## Summary
 | Suite | Result |
 |---|---|
-| Automated tests (`node --test`) | 118 total, **116 passed**, 0 failed, 2 skipped |
+| Automated tests (`node --test`) | 122 total, **119 passed**, 1 failed, 2 skipped |
 | Independent audit (honest demo workspace) | 11 checks: 11 passed, 0 failed; verdict `PASS` |
 | Independent audit (after silent registry edit) | verdict `FAIL` |
 | Fuzzing, fixed seed | 5398 generated inputs; 0 unexpected exceptions or undetected tampering |
 
 The 2 skipped tests create **file** symlinks, which Windows forbids without Developer Mode. They are reported as skipped, not passed. Directory-link tests use junctions and ran.
+
+{{chart:tests}}
 
 ## Coverage
 - **Functional:** import, stable IDs, duplicate import, revision, approval, links, attestation, impact, reports.
@@ -18,6 +22,8 @@ The 2 skipped tests create **file** symlinks, which Windows forbids without Deve
 - **Security:** traversal, symlink, oversize, HTML and Markdown escaping, tampered audit log, API without token, POST rejected, no CORS, IDE overwrite refused.
 - **Audit:** every AUD check has a pass case and a failing case (forged approval, forged identity flag, upgraded label, tampered chain, drifted evidence, edited content, seal tamper).
 - **CLI:** exit codes, `--version`, boolean flags before other flags, `--strict`, `verify`.
+
+{{chart:fuzz}}
 
 ## Fuzzing
 Deterministic seed `20261122`. 3000 mutated requirement records, 1500 Markdown inputs, 300 hostile import files (null, arrays of junk, invalid JSON, empty, wrong shapes), 398 single-character edits of the audit log (all detected) and 200 renders of injection titles through both HTML and Markdown. Only the intended `IntentError` is accepted as a failure mode. See [fuzz-results.json](test-results/fuzz-results.json).

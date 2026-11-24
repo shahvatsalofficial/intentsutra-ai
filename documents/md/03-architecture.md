@@ -1,5 +1,7 @@
 # Architecture
 
+> Principles, layers, components, data flow, decisions and known limits.
+
 ## Principles
 1. **Proof over pointers.** A ticket, PR, file or imported claim is a pointer, not proof.
 2. **Revision-bound.** Evidence and approvals attach to an exact requirement revision.
@@ -35,6 +37,8 @@
 
 Dependency direction is strictly `cli/server → core`; core modules never import the CLI.
 
+{{svg:arch}}
+
 ## Data flow
 ```text
 brief.md / requirements.json
@@ -46,6 +50,8 @@ brief.md / requirements.json
    → revise → rev 2: approvals and links become stale history
    → trace / report / audit (re-derive; write JSON, MD, HTML)
 ```
+
+{{svg:trust}}
 
 ## Key decisions
 | ADR | Decision | Reason |

@@ -1,7 +1,7 @@
 $ intentsutra verify --report audit-sample/audit-report.json
 {
   "valid": true,
-  "seal": "813af38b8b1259fe9f434f168a677c1e78e8cab52c646dd00471f7c936547169",
+  "seal": "0be703c696c1e68f94357bd8737ce3f878a313df30b828538be212dad61bbede",
   "verdict": "PASS"
 }
 
