@@ -3,7 +3,7 @@ $ intentsutra approve --id REQ-TEAM-001 --revision 1 --reviewer Asha --note Revi
   "revision": 1,
   "reviewer": "Asha",
   "note": "Reviewed acceptance with product owner",
-  "time": "2026-11-24T18:55:45.190Z",
+  "time": "2026-11-24T19:15:45.315Z",
   "kind": "local-self-attested-approval",
   "identityVerified": false
 }

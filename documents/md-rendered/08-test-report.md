@@ -2,7 +2,7 @@
 
 > Recorded test, audit and fuzz results with the exact machine, plus defects found and fixed.
 
-Recorded by `npm run proof` on **2026-11-24T18:56:07.135Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.2**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
+Recorded by `npm run proof` on **2026-11-24T19:16:07.691Z**, Node **v24.15.0**, **win32/x64**, IntentSutra **0.2.3**. Raw output: [test-results/test-run.tap](test-results/test-run.tap). Nothing here is hand-edited.
 
 ## Summary
 | Suite | Result |

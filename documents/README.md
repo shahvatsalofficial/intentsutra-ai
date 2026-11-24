@@ -1,6 +1,6 @@
 # IntentSutra AI — documents
 
-Documentation website and Markdown set for **IntentSutra AI 0.2.2**.
+Documentation website and Markdown set for **IntentSutra AI 0.2.3**.
 
 - Website source: `md/` (Markdown) built by `build.mjs` into `html/` (light default, dark toggle, responsive)
 - Rendered Markdown with real numbers: `md-rendered/`

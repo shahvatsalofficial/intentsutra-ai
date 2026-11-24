@@ -1,4 +1,4 @@
-$ intentsutra install-ide --host ../x --target C:\Users\VATSAL~1\AppData\Local\Temp\intsut-proof-8ydaRF\ide
+$ intentsutra install-ide --host ../x --target C:\Users\VATSAL~1\AppData\Local\Temp\intsut-proof-Shxgep\ide
 
 [stderr]
 INVALID_HOST: Unknown host

@@ -8,7 +8,7 @@ Everything stays on your machine. There are no network calls, no telemetry and n
 {{svg:trust}}
 
 ## Threat model
-| Threat | Control in 0.2.2 | Test |
+| Threat | Control in 0.2.3 | Test |
 |---|---|---|
 | Prompt injection in requirement or issue text | text is data; no LLM in the CLI; source labelled `untrusted-input` | requirements tests |
 | Path traversal | `inside()` resolves against the real workspace root and rejects escapes | `refuses path traversal` |

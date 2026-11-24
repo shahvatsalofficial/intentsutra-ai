@@ -1,9 +1,9 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.3",
   "node": "v24.15.0",
   "platform": "win32/x64",
   "os": "Windows_NT 10.0.26300",
-  "recordedAt": "2026-11-24T18:56:07.135Z",
+  "recordedAt": "2026-11-24T19:16:07.691Z",
   "tests": 122,
   "pass": 120,
   "fail": 0,

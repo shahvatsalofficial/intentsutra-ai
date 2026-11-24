@@ -1,8 +1,8 @@
 $ intentsutra init
 {
   "schemaVersion": "1.0",
-  "projectId": "intent-13515548ca",
-  "createdAt": "2026-11-24T18:55:37.691Z",
+  "projectId": "intent-9f1246ea15",
+  "createdAt": "2026-11-24T19:15:32.653Z",
   "requirements": []
 }
 
